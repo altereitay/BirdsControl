@@ -1,0 +1,29 @@
+﻿<Window x:Class="BirdsControl.UpdateCage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BirdsControl"
+        mc:Ignorable="d"
+        Title="UpdateCage" Height="450" Width="800">
+    <Grid>
+        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="39,64,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="SerialNumber_tb" HorizontalAlignment="Left" Margin="181,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="39,95,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="Height_tb" HorizontalAlignment="Left" Margin="181,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Width:" HorizontalAlignment="Left" Margin="39,126,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="Width_tb" HorizontalAlignment="Left" Margin="181,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Length:" HorizontalAlignment="Left" Margin="39,157,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="Length_tb" HorizontalAlignment="Left" Margin="181,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Material:" HorizontalAlignment="Left" Margin="39,191,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <ComboBox x:Name="Material_drop" Margin="181,191,499,217"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
+            <ComboBoxItem Content="Iron" />
+            <ComboBoxItem Content="Wood" />
+            <ComboBoxItem Content="Plastic" />
+        </ComboBox>
+        <Button x:Name="updateCage_btn" Content="Update Cage" HorizontalAlignment="Left" Margin="216,238,0,0" VerticalAlignment="Top" Width="85" Click="updateCage_btn_Click"/>
+        <DataGrid x:Name="gridCage" HorizontalAlignment="Center" Margin="0,342,0,10" Width="780" SelectionChanged="gridCage_SelectionChanged" />
+        <Button x:Name="LoadCages_btn" Content="Load Cages" HorizontalAlignment="Left" Margin="39,317,0,0" VerticalAlignment="Top" Click="LoadCages_btn_Click"/>
+        <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Left" Margin="691,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.282,0.433" Width="99" Click="HomePage_btn_Click"/>
+    </Grid>
+</Window>

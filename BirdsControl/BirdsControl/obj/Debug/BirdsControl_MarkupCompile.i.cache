@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\App.xaml
-1219584333
+71836664066
 41934787793
-11798883496
+17-996228253
 18-31060937
-MainWindow.xaml;
+AddBird.xaml;AddCage.xaml;MainPage.xaml;MainWindow.xaml;SearchBird.xaml;UpdateBird.xaml;UpdateCage.xaml;
 
-False
+True
 

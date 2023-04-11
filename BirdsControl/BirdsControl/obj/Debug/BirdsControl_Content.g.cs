@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("birdscontroldb.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("birdscontroldb_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("birdscontrolmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("birdscontrolmodel.tt")]
 
 
