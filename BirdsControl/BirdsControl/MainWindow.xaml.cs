@@ -24,5 +24,6 @@ namespace BirdsControl
         {
             InitializeComponent();
         }
+ 
     }
 }
