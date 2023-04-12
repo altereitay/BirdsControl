@@ -27,14 +27,19 @@ namespace BirdsControl
 
         private void Search_bird_Click(object sender, RoutedEventArgs e)
         {
-            var query = "SELECT * FROM Bird";
-            var material = SanitizeInput(this.material_tb.Text);
+            var query = "SELECT * FROM Cage";
+            string material = null;
+            if (Material_drop.SelectedIndex != -1) 
+            {
+                material = Material_drop.SelectedItem.ToString().Split(':')[1];
+            }
+            
             var serial = SanitizeInput(this.serialnumber_tb.Text);
             var whereClause = "";
 
             if (!string.IsNullOrEmpty(material))
             {
-                whereClause += "WHERE Material = @material";
+                whereClause += "WHERE Material LIKE '%' + @material + '%'";
             }
 
             if (!string.IsNullOrEmpty(serial))
@@ -49,6 +54,11 @@ namespace BirdsControl
                 }
 
                 whereClause += "SerialNumber = @serial";
+
+                if (!string.IsNullOrEmpty(whereClause))
+                {
+                    query += " " + whereClause;
+                }
 
                 using (BirdsControlDBEntities db = new BirdsControlDBEntities())
                 {
