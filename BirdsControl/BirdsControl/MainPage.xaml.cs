@@ -19,10 +19,11 @@ namespace BirdsControl
     /// Interaction logic for MainPage.xaml
     /// </summary>
     public partial class MainPage : Window
-    {
+    { 
         public MainPage()
         {
             InitializeComponent();
+            
         }
 
         private void addBird_Click(object sender, RoutedEventArgs e)

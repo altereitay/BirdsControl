@@ -1,20 +1,20 @@
-﻿BirdsControl
+BirdsControl
 
 
 winexe
 C#
 .cs
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\
 BirdsControl
 none
 false
 DEBUG;TRACE
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\App.xaml
-81062636620
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\App.xaml
+91827091168
 41934787793
-17-949246677
-181769222835
-AddBird.xaml;AddCage.xaml;CageSearch.xaml;MainPage.xaml;MainWindow.xaml;SearchBird.xaml;UpdateBird.xaml;UpdateCage.xaml;
+181420303851
+23-1896628893
+AddBird.xaml;AddCage.xaml;MainPage.xaml;MainWindow.xaml;SearchBird.xaml;Signxaml.xaml;UpdateBird.xaml;UpdateCage.xaml;Login.xaml;
 
 False
 
