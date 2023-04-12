@@ -27,20 +27,36 @@ namespace BirdsControl
 
         private void Search_bird_Click(object sender, RoutedEventArgs e)
         {
-            var query = "SELECT * FROM Bird";
-            var material = SanitizeInput(this.material_tb.Text);
-            var serial = SanitizeInput(this.serialnumber_tb.Text);
+            var query = "SELECT * FROM Cage ";
+            string material = "";
+            if (Material_drop.SelectedIndex != -1) 
+            {
+                material = Material_drop.SelectedItem.ToString().Split(':')[1].TrimStart();
+            }
+            
+            var serial = this.serialnumber_tb.Text;
             var whereClause = "";
 
             if (!string.IsNullOrEmpty(material))
             {
-                whereClause += "WHERE Material = @material";
+                if (material == "Iron")
+                {
+                    whereClause += "WHERE Material LIKE '%Iron%'";
+                } else if (material == "Wood")
+                {
+                    whereClause += "WHERE Material LIKE '%Wood%'";
+                } else
+                {
+                    whereClause += "WHERE Material LIKE '%Plastic%'";
+                }
+                
             }
 
             if (!string.IsNullOrEmpty(serial))
             {
-                if (string.IsNullOrEmpty(whereClause))
+                if (whereClause == "")
                 {
+                    Console.WriteLine("DEBUG");
                     whereClause += "WHERE ";
                 }
                 else
@@ -50,19 +66,20 @@ namespace BirdsControl
 
                 whereClause += "SerialNumber = @serial";
 
-                using (BirdsControlDBEntities db = new BirdsControlDBEntities())
+                if (!string.IsNullOrEmpty(whereClause))
                 {
-                    var results = db.Cage.SqlQuery(query,
-                        new SqlParameter("@material", material),
-                        new SqlParameter("@serial", serial)).ToList();
-                    this.gridBird.ItemsSource = results.ToList();
+                    query += " " + whereClause;
                 }
-            }
-        }
 
-        private string SanitizeInput(string input)
-        {
-            return input.Replace("'", "''");
+                BirdsControlDBEntities db = new BirdsControlDBEntities();
+                Console.WriteLine(query);
+                var results = db.Cage.SqlQuery(query,
+                    new SqlParameter("@material", material),
+                    new SqlParameter("@serial", serial)).ToList();
+
+                this.gridBird.ItemsSource = results.ToList();
+                
+            }
         }
 
         private void HomePage_btn_Click(object sender, RoutedEventArgs e)

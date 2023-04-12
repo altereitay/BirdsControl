@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="CageSearch" Height="450" Width="800">
     <Grid>
-        <Label x:Name="material_label" Content="Material: " HorizontalAlignment="Left" Margin="18,24,0,0"
-               VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16"
-               FontFamily="Microsoft New Tai Lue" Height="34" />
-        <TextBox x:Name="material_tb" HorizontalAlignment="Left" Margin="170,29,0,0" TextWrapping="Wrap" Text=""
-                 VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
+        <Label Content="Material:" HorizontalAlignment="Left" Margin="18,28,0,0" VerticalAlignment="Top" Width="114" Height="26" FontFamily="Microsoft New Tai Lue" />
+        <ComboBox x:Name="Material_drop" Margin="185,20,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
+            <ComboBoxItem Content="Iron" />
+            <ComboBoxItem Content="Wood" />
+            <ComboBoxItem Content="Plastic" />
+        </ComboBox>
         <Label x:Name="subspecies_label" Content="Serial Number: " HorizontalAlignment="Left" Margin="18,67,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="114" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="33" />

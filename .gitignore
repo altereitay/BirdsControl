@@ -1,2 +1,5 @@
 .idea
 .vs
+
+./BirdsControl/BirdsControl/bin/
+./BirdsControl/BirdsControl/obj/
