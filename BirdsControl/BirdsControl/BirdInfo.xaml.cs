@@ -40,5 +40,12 @@ namespace BirdsControl
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
+
+        private void HomePage_btn_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage newWindow = new MainPage();
+            this.Visibility = Visibility.Hidden;
+            newWindow.Show();
+        }
     }
 }

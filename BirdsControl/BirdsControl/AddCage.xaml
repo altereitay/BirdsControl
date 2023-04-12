@@ -11,16 +11,16 @@
         <ImageBrush ImageSource="/Images/background1.jpg" Stretch="Fill"></ImageBrush>
     </Window.Background>
     <Grid>
-        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="39,64,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox x:Name="SerialNumber_tb" HorizontalAlignment="Left" Margin="181,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Height:" HorizontalAlignment="Left" Margin="39,95,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox x:Name="Height_tb" HorizontalAlignment="Left" Margin="181,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Width:" HorizontalAlignment="Left" Margin="39,126,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox x:Name="Width_tb" HorizontalAlignment="Left" Margin="181,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Length:" HorizontalAlignment="Left" Margin="39,157,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox x:Name="Length_tb" HorizontalAlignment="Left" Margin="181,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Material:" HorizontalAlignment="Left" Margin="39,191,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <Button x:Name="AddCage_btn" Content="Add Cage" HorizontalAlignment="Left" Margin="211,240,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="AddCage_btn_Click">
+        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="51,90,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="SerialNumber_tb" HorizontalAlignment="Left" Margin="193,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="51,121,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="Height_tb" HorizontalAlignment="Left" Margin="193,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Width:" HorizontalAlignment="Left" Margin="51,152,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="Width_tb" HorizontalAlignment="Left" Margin="193,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Length:" HorizontalAlignment="Left" Margin="51,183,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox x:Name="Length_tb" HorizontalAlignment="Left" Margin="193,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Material:" HorizontalAlignment="Left" Margin="51,217,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Button x:Name="AddCage_btn" Content="Add Cage" HorizontalAlignment="Left" Margin="223,266,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="AddCage_btn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -38,7 +38,7 @@
             </Button.Effect>
         </Button>
         <DataGrid x:Name="gridCage" HorizontalAlignment="Center" Margin="0,342,0,10" Width="780" />
-        <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Left" Margin="691,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.282,0.433" Width="90" Height="30" Click="HomePage_btn_Click">
+        <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="1.282,0.433" Width="90" Click="HomePage_btn_Click" Height="30">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -55,10 +55,11 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox x:Name="Material_drop" Margin="181,191,499,217"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
+        <ComboBox x:Name="Material_drop" Margin="193,217,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
             <ComboBoxItem Content="Iron" />
             <ComboBoxItem Content="Wood" />
             <ComboBoxItem Content="Plastic" />
         </ComboBox>
+        <Label x:Name="label" Content="Add Cage" FontSize="35" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="64" Width="162"/>
     </Grid>
 </Window>

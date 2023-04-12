@@ -246,8 +246,8 @@
       <DependentUpon>BirdsControlModel.edmx</DependentUpon>
       <LastGenOutput>BirdsControlModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\chick2.jpg" />
     <Resource Include="Images\background1.jpg" />
-    <Resource Include="Images\background.jpg" />
     <Resource Include="Images\Bird_logo.jpeg" />
   </ItemGroup>
   <ItemGroup>
