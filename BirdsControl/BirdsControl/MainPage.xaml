@@ -30,7 +30,7 @@
             </Button.Effect>
         </Button>
 
-        <Button x:Name="Search" Content="Search" HorizontalAlignment="Left" Margin="722,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="Search_Click" >
+        <Button x:Name="SearchBird" Content="Search Bird" HorizontalAlignment="Left" Margin="722,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="SearchBird_Click" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

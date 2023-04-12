@@ -1,4 +1,4 @@
-BirdsControl
+﻿BirdsControl
 
 
 winexe
@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\App.xaml
-71836664066
+12-2100536768
 41934787793
-17-996228253
-181325300383
-AddBird.xaml;AddCage.xaml;MainPage.xaml;MainWindow.xaml;SearchBird.xaml;UpdateBird.xaml;UpdateCage.xaml;
+22-1888680879
+231728955531
+AddBird.xaml;AddCage.xaml;AddChick.xaml;BirdInfo.xaml;CageSearch.xaml;MainPage.xaml;MainWindow.xaml;SearchBird.xaml;Signxaml.xaml;UpdateBird.xaml;UpdateCage.xaml;Login.xaml;
 
 True
 

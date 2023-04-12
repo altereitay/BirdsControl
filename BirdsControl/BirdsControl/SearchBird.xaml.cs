@@ -141,5 +141,19 @@ namespace BirdsControl
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
+
+        private void gridBird_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.gridBird.SelectedIndex >= 0 && this.gridBird.SelectedItems.Count >= 0)
+            {
+                if (this.gridBird.SelectedItems[0].GetType() == typeof(Bird))
+                {
+                    Bird t = (Bird)this.gridBird.SelectedItems[0];
+                    BirdInfo newWindow = new BirdInfo(t);
+                    this.Visibility = Visibility.Hidden;
+                    newWindow.Show();
+                }
+            }
+        }
     }
 }

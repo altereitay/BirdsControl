@@ -83,6 +83,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddChick.xaml.cs">
+      <DependentUpon>AddChick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BirdInfo.xaml.cs">
+      <DependentUpon>BirdInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CageSearch.xaml.cs">
       <DependentUpon>CageSearch.xaml</DependentUpon>
     </Compile>
@@ -106,6 +112,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddCage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddChick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BirdInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
