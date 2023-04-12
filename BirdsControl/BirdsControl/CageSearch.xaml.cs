@@ -65,21 +65,20 @@ namespace BirdsControl
                 }
 
                 whereClause += "SerialNumber = @serial";
-
-                if (!string.IsNullOrEmpty(whereClause))
-                {
-                    query += " " + whereClause;
-                }
             }
-                BirdsControlDBEntities db = new BirdsControlDBEntities();
-                Console.WriteLine(query);
-                var results = db.Cage.SqlQuery(query,
-                    new SqlParameter("@material", material),
-                    new SqlParameter("@serial", serial)).ToList();
-
-                this.gridBird.ItemsSource = results.ToList();
-                
+            if (!string.IsNullOrEmpty(whereClause))
+            {
+                query += " " + whereClause;
+            }
             
+            Console.WriteLine(query);   
+            BirdsControlDBEntities db = new BirdsControlDBEntities();
+            Console.WriteLine(query);
+            var results = db.Cage.SqlQuery(query,
+                new SqlParameter("@material", material),
+                new SqlParameter("@serial", serial)).ToList();
+
+            this.gridBird.ItemsSource = results.ToList();
         }
 
         private void HomePage_btn_Click(object sender, RoutedEventArgs e)

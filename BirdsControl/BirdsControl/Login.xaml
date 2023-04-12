@@ -31,7 +31,7 @@
         <TextBox  x:Name="pass_tb" HorizontalAlignment="Left" Margin="195,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Password :" HorizontalAlignment="Left" Margin="118,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.268,-0.545"/>
         <Label Content="User name :" HorizontalAlignment="Left" Margin="118,42,0,0" VerticalAlignment="Top"/>
-        <Button Content="Sign in" HorizontalAlignment="Left" Margin="675,27,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Button_Click_1">
+        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="675,27,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

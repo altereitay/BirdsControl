@@ -33,9 +33,9 @@ namespace BirdsControl
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string c = "C:\\Users\\gofma\\OneDrive\\שולחן העבודה\\BirdsControl\\BirdsControl\\login_file.xlsx";
+            string path = "login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook workbook = excel.Workbooks.Open(c);
+            Workbook workbook = excel.Workbooks.Open(path);
             Worksheet worksheet = workbook.Worksheets[1];
             int lastRow = worksheet.Cells.SpecialCells(XlCellType.xlCellTypeLastCell).Row;
             Range range = worksheet.Range["A" + (lastRow + 1), "C" + (lastRow + 1)];
@@ -87,31 +87,25 @@ namespace BirdsControl
                         }
                     else
                         {
-                            MessageBox.Show(" ID incorrect");
+                            MessageBox.Show("ID invalid");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show(" pass incorrect");
+                        MessageBox.Show("Password invalid");
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("  userName Does not meet the conditions ");
+                    MessageBox.Show("User Name Does not meet the conditions");
                 }
             }
             else
             {
-                MessageBox.Show(" userName is not in the right size");
+                MessageBox.Show("User Name too short");
             }
-          
-
-
-
-
-
         }
     }
 }

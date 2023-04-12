@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -24,19 +25,17 @@ namespace BirdsControl
         public Window1()
         {
             InitializeComponent();
-           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             readExcel();
-           ;
         }
         private void readExcel()
         {
-            string c = "C:\\Users\\gofma\\OneDrive\\שולחן העבודה\\BirdsControl\\BirdsControl\\login_file.xlsx";
+            string path = "login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook workbook = excel.Workbooks.Open(c);
+            Workbook workbook = excel.Workbooks.Open(path);
             Worksheet worksheet = workbook.Worksheets[1];
             Range usedRange = worksheet.UsedRange;
             int rowCount = usedRange.Rows.Count;
@@ -45,33 +44,25 @@ namespace BirdsControl
             {
                 object email = worksheet.Cells[i, 1].Value;
                 object pass = worksheet.Cells[i, 2].Value;
-                
+
                 if(email_tb.Text== email.ToString() && pass_tb.Text==pass.ToString())
                 {
-
                     MainPage newWindow = new MainPage();
                     this.Visibility = Visibility.Hidden;
                     newWindow.Show();
                     flag = 1;
                     break;
                 }
-                
             }
             if (flag == 0)
             {
-                MessageBox.Show("your details are wrong plz try another time");
+                MessageBox.Show("Invalid Credentials");
             }
-          
-
             workbook.Close();
             Marshal.ReleaseComObject(worksheet);
             Marshal.ReleaseComObject(workbook);
             excel.Quit();
             Marshal.ReleaseComObject(excel);
-
-
-
-
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
