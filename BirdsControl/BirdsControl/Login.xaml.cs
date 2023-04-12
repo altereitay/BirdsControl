@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -32,9 +33,9 @@ namespace BirdsControl
         }
         private void readExcel()
         {
-            string c = "C:\\Users\\alter\\Desktop\\school\\Second_Year\\Second_semester\\testing_and_quallity\\BirdsControl\\login_file.xlsx";
+            string path = "login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook workbook = excel.Workbooks.Open(c);
+            Workbook workbook = excel.Workbooks.Open(path);
             Worksheet worksheet = workbook.Worksheets[1];
             Range usedRange = worksheet.UsedRange;
             int rowCount = usedRange.Rows.Count;
@@ -43,17 +44,15 @@ namespace BirdsControl
             {
                 object email = worksheet.Cells[i, 1].Value;
                 object pass = worksheet.Cells[i, 2].Value;
-                
+
                 if(email_tb.Text== email.ToString() && pass_tb.Text==pass.ToString())
                 {
-
                     MainPage newWindow = new MainPage();
                     this.Visibility = Visibility.Hidden;
                     newWindow.Show();
                     flag = 1;
                     break;
                 }
-                
             }
             if (flag == 0)
             {

@@ -33,9 +33,9 @@ namespace BirdsControl
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string c = "C:\\Users\\alter\\Desktop\\school\\Second_Year\\Second_semester\\testing_and_quallity\\BirdsControl\\login_file.xlsx";
+            string path = "login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook workbook = excel.Workbooks.Open(c);
+            Workbook workbook = excel.Workbooks.Open(path);
             Worksheet worksheet = workbook.Worksheets[1];
             int lastRow = worksheet.Cells.SpecialCells(XlCellType.xlCellTypeLastCell).Row;
             Range range = worksheet.Range["A" + (lastRow + 1), "C" + (lastRow + 1)];
