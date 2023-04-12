@@ -5,12 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BirdsControl"
         mc:Ignorable="d"
-        Title="MainPage" Height="709" Width="1332">
+        Title="MainPage" Height="709" Width="1332"
+        WindowState="Maximized">
+    
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/Bird_logo.jpeg" Stretch="Fill"></ImageBrush>
+    </Window.Background>
     <Grid>
-        <Button x:Name="addBird" Height="80" Width="120" Margin="58,307,1154,306" Click="addBird_Click" Content="Add Bird" ></Button>
-        <Button x:Name="addCage" Content="AddCage" HorizontalAlignment="Left" Margin="242,0,0,0" VerticalAlignment="Center" Height="80" Width="126" Click="addCage_Click"/>
-        <Button x:Name="Search" Content="Search" HorizontalAlignment="Left" Margin="428,0,0,0" VerticalAlignment="Center" Height="80" Width="136" Click="Search_Click" />
-        <Button  x:Name="UpdateBird" Content="Update Bird" HorizontalAlignment="Left" Margin="632,0,0,0" VerticalAlignment="Center" Height="80" Width="100" Click="UpdateBird_Click"/>
-        <Button x:Name="UpdateCage" Content="Update Cage" HorizontalAlignment="Left" Margin="770,0,0,0" VerticalAlignment="Center" Height="80" Width="100" Click="UpdateCage_Click"/>
+        <Button x:Name="addCage" Content="AddCage" HorizontalAlignment="Left" Margin="240,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="addCage_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="#50586C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="Search" Content="Search" HorizontalAlignment="Left" Margin="722,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="Search_Click" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="#50586C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="UpdateBird" Content="Update Bird" HorizontalAlignment="Left" Margin="401,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="UpdateBird_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="#50586C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="UpdateCage" Content="Update Cage" HorizontalAlignment="Left" Margin="560,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="UpdateCage_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="#50586C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="addBird" Content="Add Bird" HorizontalAlignment="Left" Margin="81,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="addBird_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="#50586C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
