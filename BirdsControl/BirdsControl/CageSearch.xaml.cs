@@ -70,7 +70,7 @@ namespace BirdsControl
                 {
                     query += " " + whereClause;
                 }
-
+            }
                 BirdsControlDBEntities db = new BirdsControlDBEntities();
                 Console.WriteLine(query);
                 var results = db.Cage.SqlQuery(query,
@@ -79,7 +79,7 @@ namespace BirdsControl
 
                 this.gridBird.ItemsSource = results.ToList();
                 
-            }
+            
         }
 
         private void HomePage_btn_Click(object sender, RoutedEventArgs e)

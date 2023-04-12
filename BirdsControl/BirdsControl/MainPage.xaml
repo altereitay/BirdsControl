@@ -101,5 +101,22 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <Button x:Name="SearchCage" Content="Search Cage" HorizontalAlignment="Left" Margin="887,60,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="SearchCages_Click" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
