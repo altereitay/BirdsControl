@@ -87,31 +87,25 @@ namespace BirdsControl
                         }
                     else
                         {
-                            MessageBox.Show(" ID incorrect");
+                            MessageBox.Show("ID invalid");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show(" pass incorrect");
+                        MessageBox.Show("Password invalid");
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("  userName Does not meet the conditions ");
+                    MessageBox.Show("User Name Does not meet the conditions");
                 }
             }
             else
             {
-                MessageBox.Show(" userName is not in the right size");
+                MessageBox.Show("User Name too short");
             }
-          
-
-
-
-
-
         }
     }
 }

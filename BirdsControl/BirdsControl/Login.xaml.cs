@@ -24,13 +24,11 @@ namespace BirdsControl
         public Window1()
         {
             InitializeComponent();
-           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             readExcel();
-           ;
         }
         private void readExcel()
         {
@@ -59,19 +57,13 @@ namespace BirdsControl
             }
             if (flag == 0)
             {
-                MessageBox.Show("your details are wrong plz try another time");
+                MessageBox.Show("Invalid Credentials");
             }
-          
-
             workbook.Close();
             Marshal.ReleaseComObject(worksheet);
             Marshal.ReleaseComObject(workbook);
             excel.Quit();
             Marshal.ReleaseComObject(excel);
-
-
-
-
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
