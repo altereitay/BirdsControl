@@ -5,23 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BirdsControl"
         mc:Ignorable="d"
-        Title="CageSearch" Height="450" Width="800">
+        Title="CageSearch" Height="450" Width="800"
+        WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/background1.jpg" Stretch="Fill"></ImageBrush>
+    </Window.Background>
     <Grid>
-        <Label Content="Material:" HorizontalAlignment="Left" Margin="18,28,0,0" VerticalAlignment="Top" Width="114" Height="26" FontFamily="Microsoft New Tai Lue" />
-        <ComboBox x:Name="Material_drop" Margin="185,20,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
+        <Label Content="Material:" FontSize="16" HorizontalAlignment="Left" Margin="33,147,0,0" VerticalAlignment="Top" Width="114" Height="27" FontFamily="Microsoft New Tai Lue" />
+        <ComboBox x:Name="Material_drop" Margin="191,145,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
             <ComboBoxItem Content="Iron" />
             <ComboBoxItem Content="Wood" />
             <ComboBoxItem Content="Plastic" />
         </ComboBox>
-        <Label x:Name="subspecies_label" Content="Serial Number: " HorizontalAlignment="Left" Margin="18,67,0,0"
+        <Label x:Name="subspecies_label" Content="Serial Number: " HorizontalAlignment="Left" Margin="24,188,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="114" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="33" />
-        <TextBox x:Name="serialnumber_tb" HorizontalAlignment="Left" Margin="170,72,0,0" TextWrapping="Wrap" Text=""
+        <TextBox x:Name="serialnumber_tb" HorizontalAlignment="Left" Margin="161,192,0,0" TextWrapping="Wrap" Text=""
                  VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
         <Button x:Name="Search_cage" Content="Search Cage" HorizontalAlignment="Left" Margin="191,270,0,0"
-                VerticalAlignment="Top" Width="68" Click="Search_bird_Click" Height="20" />
-        <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="780" />
-        <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Left" Margin="691,10,0,0"
-                VerticalAlignment="Top" RenderTransformOrigin="1.282,0.433" Width="99" Click="HomePage_btn_Click" />
+                VerticalAlignment="Top" Width="90" Click="Search_bird_Click" Height="30" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="734" />
+        <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Right" VerticalAlignment="Top"
+           RenderTransformOrigin="1.282,0.433" Width="90" Click="HomePage_btn_Click" Height="30">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="label" Content="Search Cage" FontSize="35" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Height="64" Width="238"/>
     </Grid>
 </Window>
