@@ -106,3 +106,14 @@ C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsC
 C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.CopyComplete
 C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.exe
 C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.pdb
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.ResolveComReference.cache
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageSearch.g.cs
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Signxaml.g.cs
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Login.g.cs
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageSearch.baml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Signxaml.baml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Login.baml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdInfo.g.cs
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdInfo.baml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\AddChick.g.cs
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\AddChick.baml

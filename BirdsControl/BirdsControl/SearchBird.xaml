@@ -35,7 +35,7 @@
                  RenderTransformOrigin="0.896,0.491" Height="24" />
         <Button x:Name="Search_bird" Content="Search_Bird" HorizontalAlignment="Left" Margin="191,270,0,0"
                 VerticalAlignment="Top" Width="68" Click="Search_bird_Click" Height="20" />
-        <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="780" />
+        <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="780" SelectionChanged="gridBird_SelectionChanged"/>
         <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Left" Margin="691,10,0,0"
                 VerticalAlignment="Top" RenderTransformOrigin="1.282,0.433" Width="99" Click="HomePage_btn_Click" />
     </Grid>
