@@ -30,9 +30,6 @@ namespace BirdsControl
             AddBird newWindow = new AddBird();
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
-
-
-
         }
 
         private void addCage_Click(object sender, RoutedEventArgs e)
@@ -40,15 +37,13 @@ namespace BirdsControl
             AddCage newWindow = new AddCage();
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
-
         }
 
-        private void Search_Click(object sender, RoutedEventArgs e)
+        private void SearchBird_Click(object sender, RoutedEventArgs e)
         {
             SearchBird newWindow = new SearchBird();
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
-
         }
 
         private void UpdateBird_Click(object sender, RoutedEventArgs e)
@@ -61,6 +56,13 @@ namespace BirdsControl
         private void UpdateCage_Click(object sender, RoutedEventArgs e)
         {
             UpdateCage newWindow = new UpdateCage();
+            this.Visibility = Visibility.Hidden;
+            newWindow.Show();
+        }
+
+        private void SearchCages_Click(object sender, RoutedEventArgs e)
+        {
+            CageSearch newWindow = new CageSearch();
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }

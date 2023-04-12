@@ -1,0 +1,26 @@
+﻿<Window x:Class="BirdsControl.CageSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BirdsControl"
+        mc:Ignorable="d"
+        Title="CageSearch" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="material_label" Content="Material: " HorizontalAlignment="Left" Margin="18,24,0,0"
+               VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16"
+               FontFamily="Microsoft New Tai Lue" Height="34" />
+        <TextBox x:Name="material_tb" HorizontalAlignment="Left" Margin="170,29,0,0" TextWrapping="Wrap" Text=""
+                 VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
+        <Label x:Name="subspecies_label" Content="Serial Number: " HorizontalAlignment="Left" Margin="18,67,0,0"
+               VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="114" FontSize="16"
+               FontFamily="Microsoft New Tai Lue" Height="33" />
+        <TextBox x:Name="serialnumber_tb" HorizontalAlignment="Left" Margin="170,72,0,0" TextWrapping="Wrap" Text=""
+                 VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
+        <Button x:Name="Search_cage" Content="Search Cage" HorizontalAlignment="Left" Margin="191,270,0,0"
+                VerticalAlignment="Top" Width="68" Click="Search_bird_Click" Height="20" />
+        <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="780" />
+        <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Left" Margin="691,10,0,0"
+                VerticalAlignment="Top" RenderTransformOrigin="1.282,0.433" Width="99" Click="HomePage_btn_Click" />
+    </Grid>
+</Window>

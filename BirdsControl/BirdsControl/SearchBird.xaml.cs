@@ -29,7 +29,7 @@ namespace BirdsControl
         {
             var query = "SELECT * FROM Bird";
             var specie = SanitizeInput(this.species_tb.Text);
-            var serial = SanitizeInput(this.serialnumber_tb.Text);
+            var id = SanitizeInput(this.id_tb.Text);
             var dateString = SanitizeInput(this.datePicker.Text);
             DateTime date = default;
             var sex = SanitizeInput(this.sex_tb.Text);
@@ -41,7 +41,7 @@ namespace BirdsControl
                 whereClause += "WHERE Specie = @specie";
             }
 
-            if (!string.IsNullOrEmpty(serial))
+            if (!string.IsNullOrEmpty(id))
             {
                 if (string.IsNullOrEmpty(whereClause))
                 {
@@ -52,7 +52,7 @@ namespace BirdsControl
                     whereClause += " AND ";
                 }
 
-                whereClause += "Id = @serial";
+                whereClause += "Id = @id";
             }
 
             if (!string.IsNullOrEmpty(dateString))
@@ -109,7 +109,7 @@ namespace BirdsControl
                 {
                     var results = db.Bird.SqlQuery(query,
                         new SqlParameter("@specie", specie),
-                        new SqlParameter("@serial", serial),
+                        new SqlParameter("@id", id),
                         new SqlParameter("@date", dateString),
                         new SqlParameter("@sex", sex),
                         new SqlParameter("@cage", cage)).ToList();
@@ -121,7 +121,7 @@ namespace BirdsControl
             {
                 var results = db.Bird.SqlQuery(query,
                     new SqlParameter("@specie", specie),
-                    new SqlParameter("@serial", serial),
+                    new SqlParameter("@id", id),
                     new SqlParameter("@date", date),
                     new SqlParameter("@sex", sex),
                     new SqlParameter("@cage", cage)).ToList();

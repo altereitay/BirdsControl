@@ -12,10 +12,10 @@
                FontFamily="Microsoft New Tai Lue" Height="34" />
         <TextBox x:Name="species_tb" HorizontalAlignment="Left" Margin="170,29,0,0" TextWrapping="Wrap" Text=""
                  VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
-        <Label x:Name="subspecies_label" Content="Serial Number: " HorizontalAlignment="Left" Margin="18,67,0,0"
+        <Label x:Name="id_label" Content="Id: " HorizontalAlignment="Left" Margin="18,67,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="114" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="33" />
-        <TextBox x:Name="serialnumber_tb" HorizontalAlignment="Left" Margin="170,72,0,0" TextWrapping="Wrap" Text=""
+        <TextBox x:Name="id_tb" HorizontalAlignment="Left" Margin="170,72,0,0" TextWrapping="Wrap" Text=""
                  VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
         <Label x:Name="hatch_label" Content="Hatch Date: " HorizontalAlignment="Left" Margin="18,113,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="111" FontSize="16"

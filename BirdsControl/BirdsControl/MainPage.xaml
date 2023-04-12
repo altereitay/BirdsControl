@@ -7,10 +7,18 @@
         mc:Ignorable="d"
         Title="MainPage" Height="709" Width="1332">
     <Grid>
-        <Button x:Name="addBird" Height="80" Width="120" Margin="58,307,1154,306" Click="addBird_Click" Content="Add Bird" ></Button>
-        <Button x:Name="addCage" Content="AddCage" HorizontalAlignment="Left" Margin="242,0,0,0" VerticalAlignment="Center" Height="80" Width="126" Click="addCage_Click"/>
-        <Button x:Name="Search" Content="Search" HorizontalAlignment="Left" Margin="428,0,0,0" VerticalAlignment="Center" Height="80" Width="136" Click="Search_Click" />
-        <Button  x:Name="UpdateBird" Content="Update Bird" HorizontalAlignment="Left" Margin="632,0,0,0" VerticalAlignment="Center" Height="80" Width="100" Click="UpdateBird_Click"/>
-        <Button x:Name="UpdateCage" Content="Update Cage" HorizontalAlignment="Left" Margin="770,0,0,0" VerticalAlignment="Center" Height="80" Width="100" Click="UpdateCage_Click"/>
+        <Button x:Name="addBird" Height="80" Width="120" Margin="58,307,1154,306" Click="addBird_Click"
+                Content="Add Bird">
+        </Button>
+        <Button x:Name="addCage" Content="AddCage" HorizontalAlignment="Left" Margin="242,0,0,0"
+                VerticalAlignment="Center" Height="80" Width="126" Click="addCage_Click" />
+        <Button x:Name="SearchBirds" Content="Search Birds" HorizontalAlignment="Left" Margin="428,0,0,0"
+                VerticalAlignment="Center" Height="80" Width="136" Click="SearchBird_Click" />
+        <Button x:Name="SearchCages" Content="Search Cages" HorizontalAlignment="Left" Margin="970,0,0,0"
+                VerticalAlignment="Center" Height="80" Width="136" Click="SearchCages_Click" />
+        <Button x:Name="UpdateBird" Content="Update Bird" HorizontalAlignment="Left" Margin="632,0,0,0"
+                VerticalAlignment="Center" Height="80" Width="100" Click="UpdateBird_Click" />
+        <Button x:Name="UpdateCage" Content="Update Cage" HorizontalAlignment="Left" Margin="770,0,0,0"
+                VerticalAlignment="Center" Height="80" Width="100" Click="UpdateCage_Click" />
     </Grid>
 </Window>
