@@ -27,8 +27,7 @@ namespace BirdsControl
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
 
-            Bird birdObject = new Bird()
-            {
+            Bird birdObject = new Bird() {
                 Specie = species_tb.Text,
                 SubSpecie = subspecies_tb.Text,
                 HatchingDate = datePicker.SelectedDate.Value,
