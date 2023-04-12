@@ -70,3 +70,8 @@ C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\B
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.CopyComplete
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.exe
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.pdb
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.ResolveComReference.cache
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Login.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Login.baml
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Signxaml.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Signxaml.baml
