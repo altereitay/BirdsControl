@@ -21,7 +21,7 @@
         <TextBox x:Name="sex_tb" HorizontalAlignment="Left" Margin="170,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
         <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="18,202,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
         <TextBox x:Name="cage_tb" HorizontalAlignment="Left" Margin="170,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
-        <Button x:Name="Update_bird" Content="Update Bird" HorizontalAlignment="Left" Margin="191,270,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Update_bird_Click">
+        <Button x:Name="Update_bird" Content="Update Bird" HorizontalAlignment="Left" Margin="230,247,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Update_bird_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -29,9 +29,9 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
                     <GradientStop Color="#DCE2F0" Offset="0.5"/>
-                    <GradientStop Color="#50586C" Offset="1"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
             <Button.Effect>
@@ -39,7 +39,7 @@
             </Button.Effect>
         </Button>
         <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="780" SelectionChanged="gridBird_SelectionChanged" />
-        <Button x:Name="Load_Birds" Content="Load Birds" HorizontalAlignment="Left" Margin="18,298,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Load_Birds_Click">
+        <Button x:Name="Load_Birds" Content="Load Birds" HorizontalAlignment="Left" Margin="18,280,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Load_Birds_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -47,9 +47,9 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
                     <GradientStop Color="#DCE2F0" Offset="0.5"/>
-                    <GradientStop Color="#50586C" Offset="1"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
             <Button.Effect>
@@ -64,9 +64,9 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
                     <GradientStop Color="#DCE2F0" Offset="0.5"/>
-                    <GradientStop Color="#50586C" Offset="1"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
             <Button.Effect>

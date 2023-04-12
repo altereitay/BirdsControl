@@ -25,7 +25,7 @@
             <ComboBoxItem Content="Wood" />
             <ComboBoxItem Content="Plastic" />
         </ComboBox>
-        <Button x:Name="updateCage_btn" Content="Update Cage" HorizontalAlignment="Left" Margin="216,238,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="updateCage_btn_Click">
+        <Button x:Name="updateCage_btn" Content="Update Cage" HorizontalAlignment="Left" Margin="211,237,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="updateCage_btn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -33,9 +33,9 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
                     <GradientStop Color="#DCE2F0" Offset="0.5"/>
-                    <GradientStop Color="#50586C" Offset="1"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
             <Button.Effect>
@@ -43,7 +43,7 @@
             </Button.Effect>
         </Button>
         <DataGrid x:Name="gridCage" HorizontalAlignment="Center" Margin="0,342,0,10" Width="780" SelectionChanged="gridCage_SelectionChanged" />
-        <Button x:Name="LoadCages_btn" Content="Load Cages" HorizontalAlignment="Left" Margin="39,317,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="LoadCages_btn_Click">
+        <Button x:Name="LoadCages_btn" Content="Load Cages" HorizontalAlignment="Left" Margin="39,294,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="LoadCages_btn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -51,9 +51,9 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
                     <GradientStop Color="#DCE2F0" Offset="0.5"/>
-                    <GradientStop Color="#50586C" Offset="1"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
             <Button.Effect>
@@ -68,9 +68,9 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#50586C" Offset="0"/>
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
                     <GradientStop Color="#DCE2F0" Offset="0.5"/>
-                    <GradientStop Color="#50586C" Offset="1"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
             <Button.Effect>
