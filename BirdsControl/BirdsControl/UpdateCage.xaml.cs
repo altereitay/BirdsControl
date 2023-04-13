@@ -49,18 +49,30 @@ namespace BirdsControl
                     where d.Id == this.updatingTableId
                     select d;
 
-            Cage obj = r.SingleOrDefault();
-            if (obj != null)
-            {
-                obj.SerialNumber = this.SerialNumber_tb.Text;
-                obj.Length = int.Parse(this.Length_tb.Text);
-                obj.Width = int.Parse(this.Width_tb.Text);
-                obj.Height = int.Parse(this.Height_tb.Text);
-                obj.Material = Material_drop.SelectedItem.ToString().Split(':')[1];
-            }
+            var result = from cage in db.Cage
+                         where (SerialNumber_tb.Text == cage.SerialNumber)
+                         select cage;
 
-            db.SaveChanges();
-            this.gridCage.ItemsSource = db.Cage.ToList();
+            if (!result.Any())
+            {
+
+                Cage obj = r.SingleOrDefault();
+                if (obj != null)
+                {
+                    obj.SerialNumber = this.SerialNumber_tb.Text;
+                    obj.Length = int.Parse(this.Length_tb.Text);
+                    obj.Width = int.Parse(this.Width_tb.Text);
+                    obj.Height = int.Parse(this.Height_tb.Text);
+                    obj.Material = Material_drop.SelectedItem.ToString().Split(':')[1];
+                }
+
+                db.SaveChanges();
+                this.gridCage.ItemsSource = db.Cage.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Cage is already exists");
+            }
         }
 
         private void LoadCages_btn_Click(object sender, RoutedEventArgs e)

@@ -128,3 +128,16 @@ C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\B
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageSearch.baml
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Signxaml.baml
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Login.baml
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.ResolveComReference.cache
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\AddChick.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdInfo.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageSearch.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Signxaml.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Login.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\AddChick.baml
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdInfo.baml
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageSearch.baml
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Signxaml.baml
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\Login.baml
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageInfo.g.cs
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageInfo.baml

@@ -87,5 +87,20 @@ namespace BirdsControl
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
+
+        private void gridBird_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.gridBird.SelectedIndex >= 0 && this.gridBird.SelectedItems.Count >= 0)
+            {
+                if (this.gridBird.SelectedItems[0].GetType() == typeof(Cage))
+                {
+                    Cage t = (Cage)this.gridBird.SelectedItems[0];
+                    CageInfo newWindow = new CageInfo(t);
+                    this.Visibility = Visibility.Hidden;
+                    newWindow.Show();
+                }
+            }
+
+        }
     }
 }
