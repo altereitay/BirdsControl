@@ -33,7 +33,7 @@ namespace BirdsControl
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string path = "login_file.xlsx";
+            string path = "C:\\Users\\gofma\\OneDrive\\שולחן העבודה\\BirdsControl\\BirdsControl\\login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             Workbook workbook = excel.Workbooks.Open(path);
             Worksheet worksheet = workbook.Worksheets[1];

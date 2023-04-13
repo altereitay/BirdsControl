@@ -11,17 +11,17 @@
         <ImageBrush ImageSource="/Images/background1.jpg" Stretch="Fill"></ImageBrush>
     </Window.Background>
     <Grid>
-        <Label x:Name="species_label" Content="Species: " HorizontalAlignment="Left" Margin="17,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
-        <TextBox x:Name="species_tb" HorizontalAlignment="Left" Margin="169,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
-        <Label x:Name="subspecies_label" Content="Subspecies: " HorizontalAlignment="Left" Margin="17,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="101" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="33"/>
-        <TextBox x:Name="subspecies_tb" HorizontalAlignment="Left" Margin="169,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
-        <Label x:Name="hatch_label" Content="Hatch Date: " HorizontalAlignment="Left" Margin="17,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="111" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="32"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="169,170,0,0" VerticalAlignment="Top" Width="150" Height="26"/>
-        <Label x:Name="sex_label" Content="Sex: " HorizontalAlignment="Left" Margin="17,213,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
-        <TextBox x:Name="sex_tb" HorizontalAlignment="Left" Margin="169,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
-        <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="17,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
-        <TextBox x:Name="cage_tb" HorizontalAlignment="Left" Margin="169,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
-        <Button x:Name="AddBird_btn" Content="Create Bird" HorizontalAlignment="Left" Margin="229,394,0,0" VerticalAlignment="Top" Width="90" Click="AddBird_btn_Click"  Height="30">
+        <Label x:Name="species_label" Content="Species: " HorizontalAlignment="Left" Margin="17,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
+        <TextBlock x:Name="species_tb" HorizontalAlignment="Left" Margin="169,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
+        <Label x:Name="subspecies_label" Content="Subspecies: " HorizontalAlignment="Left" Margin="17,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="101" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="33"/>
+        <TextBlock x:Name="subspecies_tb" HorizontalAlignment="Left" Margin="169,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
+        <Label x:Name="hatch_label" Content="Hatch Date: " HorizontalAlignment="Left" Margin="17,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="111" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="32"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="169,147,0,0" VerticalAlignment="Top" Width="150" Height="26"/>
+        <Label x:Name="sex_label" Content="Sex: " HorizontalAlignment="Left" Margin="17,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
+        <TextBox x:Name="sex_tb" HorizontalAlignment="Left" Margin="169,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
+        <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="17,234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
+        <TextBlock x:Name="cage_tb" HorizontalAlignment="Left" Margin="169,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
+        <Button x:Name="AddBird_btn" Content="Create Bird" HorizontalAlignment="Left" Margin="229,373,0,0" VerticalAlignment="Top"  Width="90" Height="30" Click="AddBird_btn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -55,10 +55,27 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label x:Name="Mom_label" Content="Mom Id: " HorizontalAlignment="Left" Margin="17,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
-        <TextBox x:Name="momId_tb" HorizontalAlignment="Left" Margin="169,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
-        <Label x:Name="Dad_label_Copy" Content="Dad Id: " HorizontalAlignment="Left" Margin="17,343,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
-        <TextBox x:Name="dadId_tb" HorizontalAlignment="Left" Margin="169,348,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
-        <Label x:Name="label" Content="Add Chick" FontSize="35" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="64" Width="198"/>
+        <Label x:Name="Mom_label" Content="Mom Id: " HorizontalAlignment="Left" Margin="17,278,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
+        <TextBox x:Name="momId_tb" HorizontalAlignment="Left" Margin="169,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
+        <Label x:Name="Dad_label_Copy" Content="Dad Id: " HorizontalAlignment="Left" Margin="17,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
+        <TextBox x:Name="dadId_tb" HorizontalAlignment="Left" Margin="169,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
+        <Label x:Name="label" Content="Add Chick" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" Width="198"/>
+        <Button x:Name="Back_btn" Content="Back" HorizontalAlignment="Right" Margin="700,373,0,0" VerticalAlignment="Center" RenderTransformOrigin="1.653,1.605" Width="90" Height="30" Click="Back_btn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

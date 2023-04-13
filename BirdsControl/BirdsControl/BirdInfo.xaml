@@ -14,36 +14,36 @@
         <Label x:Name="species_label" Content="Species: " HorizontalAlignment="Left" Margin="26,132,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="34" />
-        <TextBox x:Name="species_tb" HorizontalAlignment="Left" Margin="178,137,0,0" TextWrapping="Wrap" Text=""
+        <TextBlock x:Name="species_tb" HorizontalAlignment="Left" Margin="178,137,0,0" TextWrapping="Wrap" Text=""
                  VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
         <Label x:Name="id_label" Content="Id: " HorizontalAlignment="Left" Margin="31,90,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="114" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="32" />
-        <TextBox x:Name="id_tb" HorizontalAlignment="Left" Margin="178,98,0,0" TextWrapping="Wrap" Text=""
+        <TextBlock x:Name="id_tb" HorizontalAlignment="Left" Margin="178,98,0,0" TextWrapping="Wrap" Text=""
                  VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
-        <Label x:Name="hatch_label" Content="Hatch Date: " HorizontalAlignment="Left" Margin="26,0,0,0"
-               VerticalAlignment="Center" RenderTransformOrigin="-3.882,-0.268" Width="111" FontSize="16"
+        <Label x:Name="hatch_label" Content="Hatch Date: " HorizontalAlignment="Left" Margin="26,214,0,0"
+               VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="111" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="32" />
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="178,0,0,0" VerticalAlignment="Center"
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="178,217,0,0" VerticalAlignment="Top"
                     Width="150" Height="26" />
-        <Label x:Name="sex_label" Content="Sex: " HorizontalAlignment="Left" Margin="26,238,0,0"
+        <Label x:Name="sex_label" Content="Sex: " HorizontalAlignment="Left" Margin="26,254,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="34" />
-        <TextBox x:Name="sex_tb" HorizontalAlignment="Left" Margin="178,243,0,0" TextWrapping="Wrap" Text=""
+        <TextBlock x:Name="sex_tb" HorizontalAlignment="Left" Margin="178,259,0,0" TextWrapping="Wrap" Text=""
                  VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
-        <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="26,276,0,0"
+        <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="26,292,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="34" />
-        <TextBox x:Name="cage_tb" HorizontalAlignment="Left" Margin="178,281,0,0" TextWrapping="Wrap" Text=""
+        <TextBlock x:Name="cage_tb" HorizontalAlignment="Left" Margin="178,297,0,0" TextWrapping="Wrap" Text=""
                  VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue"
                  RenderTransformOrigin="0.896,0.491" Height="24" />
 
         <Label x:Name="species_label_Copy" Content="Subspecie: " HorizontalAlignment="Left" Margin="26,170,0,0"
             VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="97" FontSize="16"
             FontFamily="Microsoft New Tai Lue" Height="34" />
-        <TextBox x:Name="subspecies_tb" HorizontalAlignment="Left" Margin="178,175,0,0" TextWrapping="Wrap" Text=""
+        <TextBlock x:Name="subspecies_tb" HorizontalAlignment="Left" Margin="178,175,0,0" TextWrapping="Wrap" Text=""
             VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
-        <Button x:Name="AddChick" Content="Add Chick" HorizontalAlignment="Left" Margin="42,327,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,0.879" Width="90" Height="30" Click="AddChick_Click">
+        <Button x:Name="AddChick" Content="Add Chick" HorizontalAlignment="Left" Margin="238,351,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,0.879" Width="90" Height="30" Click="AddChick_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -78,5 +78,22 @@
             </Button.Effect>
         </Button>
         <Label x:Name="label" Content="Bird Information" FontSize="35" HorizontalAlignment="Left" Margin="253,10,0,0" VerticalAlignment="Top" Height="64" Width="400"/>
+        <Button x:Name="Back_btn" Content="Back" HorizontalAlignment="Left" Margin="700,351,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.653,1.605" Width="90" Height="30" Click="Back_btn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightSteelBlue" Offset="0"/>
+                    <GradientStop Color="#DCE2F0" Offset="0.5"/>
+                    <GradientStop Color="LightSteelBlue" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
