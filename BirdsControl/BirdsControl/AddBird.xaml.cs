@@ -34,9 +34,19 @@ namespace BirdsControl
                 Sex = sex_tb.Text,
                 CageNumber = cage_tb.Text
             };
-            db.Bird.Add(birdObject);
-            db.SaveChanges();
-            this.gridBird.ItemsSource = db.Bird.ToList();
+            var result=from cage in db.Cage where(cage_tb.Text==cage.SerialNumber)
+                       select cage;
+
+            if (!result.Any())
+            {
+                MessageBox.Show("The cage number Does not exist");
+            }
+            else
+            {
+                db.Bird.Add(birdObject);
+                db.SaveChanges();
+                this.gridBird.ItemsSource = db.Bird.ToList();
+            }
         }
 
         private void HomePage_btn_Click(object sender, RoutedEventArgs e)

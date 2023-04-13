@@ -32,19 +32,31 @@ namespace BirdsControl
                     where d.Id == this.updatingTableId
                     select d;
 
-            Bird obj = r.SingleOrDefault();
-            if (obj != null)
+
+            var result = from cage in db.Cage
+                         where (cage_tb.Text == cage.SerialNumber)
+                         select cage;
+
+            if (!result.Any())
             {
-                obj.Specie = this.species_tb.Text;
-                obj.SubSpecie = this.subspecies_tb.Text;
-                obj.HatchingDate = this.datePicker.SelectedDate.Value;
-                obj.Sex = this.sex_tb.Text;
-                obj.CageNumber = this.cage_tb.Text;
+                MessageBox.Show("The cage number Does not exist");
             }
 
-            db.SaveChanges();
-            this.gridBird.ItemsSource = db.Bird.ToList();
+            else
+            {
+                Bird obj = r.SingleOrDefault();
+                if (obj != null)
+                {
+                    obj.Specie = this.species_tb.Text;
+                    obj.SubSpecie = this.subspecies_tb.Text;
+                    obj.HatchingDate = this.datePicker.SelectedDate.Value;
+                    obj.Sex = this.sex_tb.Text;
+                    obj.CageNumber = this.cage_tb.Text;
+                }
 
+                db.SaveChanges();
+                this.gridBird.ItemsSource = db.Bird.ToList();
+            }
 
         }
 

@@ -89,6 +89,9 @@
     <Compile Include="BirdInfo.xaml.cs">
       <DependentUpon>BirdInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CageInfo.xaml.cs">
+      <DependentUpon>CageInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CageSearch.xaml.cs">
       <DependentUpon>CageSearch.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BirdInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CageInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -40,7 +40,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="734" />
+        <DataGrid x:Name="gridBird" HorizontalAlignment="Center" Margin="0,318,0,10" Width="734" SelectionChanged="gridBird_SelectionChanged"/>
         <Button x:Name="HomePage_btn" Content="Home Page" HorizontalAlignment="Right" VerticalAlignment="Top"
            RenderTransformOrigin="1.282,0.433" Width="90" Click="HomePage_btn_Click" Height="30">
             <Button.Resources>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\
 BirdsControl
 none
 false
 DEBUG;TRACE
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\App.xaml
-12-2100536768
+C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\App.xaml
+13-156837898
 41934787793
-21193407739
-23-2122089313
-AddBird.xaml;AddCage.xaml;AddChick.xaml;BirdInfo.xaml;CageSearch.xaml;MainPage.xaml;MainWindow.xaml;SearchBird.xaml;Signxaml.xaml;UpdateBird.xaml;UpdateCage.xaml;Login.xaml;
+22-1593981231
+23-1896628893
+AddBird.xaml;AddCage.xaml;AddChick.xaml;BirdInfo.xaml;CageInfo.xaml;CageSearch.xaml;MainPage.xaml;MainWindow.xaml;SearchBird.xaml;Signxaml.xaml;UpdateBird.xaml;UpdateCage.xaml;Login.xaml;
 
 False
 
