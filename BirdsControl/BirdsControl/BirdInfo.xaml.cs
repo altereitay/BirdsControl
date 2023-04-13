@@ -47,5 +47,12 @@ namespace BirdsControl
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
+
+        private void Back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SearchBird newWindow = new SearchBird();
+            this.Visibility = Visibility.Hidden;
+            newWindow.Show();
+        }
     }
 }

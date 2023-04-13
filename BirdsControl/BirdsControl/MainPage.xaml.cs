@@ -67,5 +67,10 @@ namespace BirdsControl
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
+
+        private void logout_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

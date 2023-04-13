@@ -19,6 +19,7 @@ namespace BirdsControl
     /// </summary>
     public partial class AddChick : Window
     {
+        Bird temp = new Bird();
         public AddChick(Bird bird)
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace BirdsControl
 
             if (bird.Sex == "Female" || bird.Sex == "female")
                 this.momId_tb.Text = bird.Id.ToString();
+            temp = bird;
         }
 
         private void AddBird_btn_Click(object sender, RoutedEventArgs e)
@@ -56,6 +58,13 @@ namespace BirdsControl
         private void HomePage_btn_Click(object sender, RoutedEventArgs e)
         {
             MainPage newWindow = new MainPage();
+            this.Visibility = Visibility.Hidden;
+            newWindow.Show();
+        }
+
+        private void Back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            BirdInfo newWindow = new BirdInfo(temp);
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
