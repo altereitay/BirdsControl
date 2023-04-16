@@ -33,7 +33,7 @@ namespace BirdsControl
         }
         private void readExcel()
         {
-            string path = "C:\\Users\\gofma\\OneDrive\\שולחן העבודה\\BirdsControl\\BirdsControl\\login_file.xlsx";
+            string path = "C:\\Users\\niron\\Desktop\\BirdsControl\\BirdsControl\\login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             Workbook workbook = excel.Workbooks.Open(path);
             Worksheet worksheet = workbook.Worksheets[1];

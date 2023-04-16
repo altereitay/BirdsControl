@@ -92,5 +92,36 @@ namespace BirdsControl
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
+
+        private void Delete_bird_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult msg = MessageBox.Show("Are you sure?",
+              "Deletre bird",
+              MessageBoxButton.YesNo,
+              MessageBoxImage.Warning,
+              MessageBoxResult.No
+              );
+            if (msg == MessageBoxResult.Yes)
+            {
+
+
+                BirdsControlDBEntities db = new BirdsControlDBEntities();
+
+                var r = from d in db.Bird
+                        where d.Id == this.updatingTableId
+                        select d;
+
+                Bird obj = r.SingleOrDefault();
+                if (obj != null)
+                {
+                    db.Bird.Remove(obj);
+                    db.SaveChanges();
+                }
+                this.gridBird.ItemsSource = db.Bird.ToList();
+            }
+
+           
+
+        }
     }
 }
