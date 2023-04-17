@@ -87,5 +87,43 @@ namespace BirdsControl
             this.Visibility = Visibility.Hidden;
             newWindow.Show();
         }
+
+        private void Delete_cage_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult msg = MessageBox.Show("Are you sure?",
+          "Deletre bird",
+          MessageBoxButton.YesNo,
+          MessageBoxImage.Warning,
+          MessageBoxResult.No
+          );
+            if (msg == MessageBoxResult.Yes)
+            {
+
+
+                BirdsControlDBEntities db = new BirdsControlDBEntities();
+
+                var r = from d in db.Cage
+                        where d.SerialNumber == this.SerialNumber_tb.Text
+                        select d;
+               var birdsToDelete = from b in db.Bird
+                        where b.CageNumber == this.SerialNumber_tb.Text
+                            select b;
+                foreach (var bird in birdsToDelete)
+                {
+                    db.Bird.Remove(bird);
+                }
+
+                db.SaveChanges();
+
+                Cage obj = r.SingleOrDefault();
+                if (obj != null)
+                {
+                    db.Cage.Remove(obj);
+                    db.SaveChanges();
+                }
+                this.gridCage.ItemsSource = db.Cage.ToList();
+            }
+
+        }
     }
 }
