@@ -226,6 +226,7 @@
     <None Include="BirdsControlModel.edmx.diagram">
       <DependentUpon>BirdsControlModel.edmx</DependentUpon>
     </None>
+    <None Include="login_file.xlsx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
