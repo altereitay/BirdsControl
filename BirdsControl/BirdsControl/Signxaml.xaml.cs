@@ -17,6 +17,7 @@ using Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace BirdsControl
 {
@@ -33,9 +34,9 @@ namespace BirdsControl
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string path = "C:\\Users\\gofma\\OneDrive\\שולחן העבודה\\BirdsControl\\BirdsControl\\login_file.xlsx";
+            string path = @"..\..\login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook workbook = excel.Workbooks.Open(path);
+            Workbook workbook = excel.Workbooks.Open(Directory.GetCurrentDirectory() + "\\" + path);
             Worksheet worksheet = workbook.Worksheets[1];
             int lastRow = worksheet.Cells.SpecialCells(XlCellType.xlCellTypeLastCell).Row;
             Range range = worksheet.Range["A" + (lastRow + 1), "C" + (lastRow + 1)];

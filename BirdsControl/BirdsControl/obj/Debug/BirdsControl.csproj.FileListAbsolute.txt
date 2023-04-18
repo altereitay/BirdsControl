@@ -143,3 +143,5 @@ C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\D
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageInfo.baml
 C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageInfo.g.cs
 C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageInfo.baml
+C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageInfo.g.cs
+C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\BirdsControl\obj\Debug\CageInfo.baml
