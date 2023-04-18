@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -33,9 +34,10 @@ namespace BirdsControl
         }
         private void readExcel()
         {
-            string path = "C:\\Users\\niron\\Desktop\\BirdsControl\\BirdsControl\\login_file.xlsx";
+            
+            string path = @"..\..\login_file.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook workbook = excel.Workbooks.Open(path);
+            Workbook workbook = excel.Workbooks.Open(Directory.GetCurrentDirectory() + "\\"+path);
             Worksheet worksheet = workbook.Worksheets[1];
             Range usedRange = worksheet.UsedRange;
             int rowCount = usedRange.Rows.Count;
