@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdsControl", "BirdsControl\BirdsControl.csproj", "{0DB401F0-3046-4D29-98B8-F783D3EF1B10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdsControl", "BirdsControl.csproj", "{0DB401F0-3046-4D29-98B8-F783D3EF1B10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {224FCA73-A348-43D7-AD63-00950AC2EA42}
+		SolutionGuid = {08CEA5CB-4B87-483E-8655-A7E213553ABC}
 	EndGlobalSection
 EndGlobal
