@@ -1,0 +1,29 @@
+﻿<Page x:Class="BirdsControl.CageSearchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BirdsControl"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CageSearchPage">
+
+    <Grid>
+        <Label Content="Material:" FontSize="16" HorizontalAlignment="Left" Margin="33,147,0,0" VerticalAlignment="Top" Width="114" Height="27" FontFamily="Microsoft New Tai Lue" />
+        <ComboBox x:Name="Material_drop" Margin="191,145,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
+            <ComboBoxItem Content="Iron" />
+            <ComboBoxItem Content="Wood" />
+            <ComboBoxItem Content="Plastic" />
+        </ComboBox>
+        <Label x:Name="subspecies_label" Content="Serial Number: " HorizontalAlignment="Left" Margin="24,188,0,0"
+               VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="114" FontSize="16"
+               FontFamily="Microsoft New Tai Lue" Height="33" />
+        <TextBox x:Name="serialnumber_tb" HorizontalAlignment="Left" Margin="161,192,0,0" TextWrapping="Wrap" Text=""
+                 VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
+        <Button x:Name="Search_cage" Content="Search Cage" HorizontalAlignment="Left" Margin="191,270,0,0"
+                VerticalAlignment="Top" Width="120" Click="Search_bird_Click" Height="30"/>
+
+        <DataGrid x:Name="gridBird" Background="Transparent" HorizontalAlignment="Center" Margin="0,318,0,10" Width="734" SelectionChanged="gridBird_SelectionChanged"/>
+        <Label x:Name="label" Content="Search Cage" FontSize="35" HorizontalAlignment="Left" Margin="33,35,0,0" VerticalAlignment="Top" Height="64" Width="238"/>
+    </Grid>
+</Page>
