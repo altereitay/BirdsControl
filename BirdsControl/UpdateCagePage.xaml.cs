@@ -44,6 +44,13 @@ namespace BirdsControl
         private void updateCage_btn_Click(object sender, RoutedEventArgs e)
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
+            if (string.IsNullOrWhiteSpace(SerialNumber_tb.Text) || string.IsNullOrWhiteSpace(Length_tb.Text) ||
+               string.IsNullOrWhiteSpace(Width_tb.Text) || string.IsNullOrWhiteSpace(Height_tb.Text) ||
+               Material_drop.SelectedItem == null)
+            {
+                MessageBox.Show("Please fill in all the fields before adding a cage.");
+                return;
+            }
 
             var r = from d in db.Cage
                     where d.Id == this.updatingTableId
