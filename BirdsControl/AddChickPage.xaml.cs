@@ -30,11 +30,11 @@ namespace BirdsControl
             this.subspecies_tb.Text = bird.SubSpecie;
             this.cage_tb.Text = bird.CageNumber;
 
-            if (bird.Sex == "Male" || bird.Sex == "male")
-                this.dadId_tb.Text = bird.Id.ToString();
-
-            if (bird.Sex == "Female" || bird.Sex == "female")
-                this.momId_tb.Text = bird.Id.ToString();
+            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
+            {
+                MessageBox.Show("Enter M/male or F/female");
+                return;
+            }
             temp = bird;
         }
 

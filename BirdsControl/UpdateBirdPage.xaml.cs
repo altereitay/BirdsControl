@@ -33,6 +33,15 @@ namespace BirdsControl
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
             }
+            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
+            {
+                MessageBox.Show("Enter M/male or F/female");
+                return;
+            }
+
+
+
+
             var r = from d in db.Bird
                     where d.Id == this.updatingTableId
                     select d;
@@ -55,6 +64,7 @@ namespace BirdsControl
                     obj.Specie = this.species_tb.Text;
                     obj.SubSpecie = this.subspecies_tb.Text;
                     obj.HatchingDate = this.datePicker.SelectedDate.Value;
+
                     obj.Sex = this.sex_tb.Text;
                     obj.CageNumber = this.cage_tb.Text;
                 }

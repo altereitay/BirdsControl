@@ -33,29 +33,39 @@ namespace BirdsControl
                 return;
             }
 
-            BirdsControlDBEntities db = new BirdsControlDBEntities();
-
-            Bird birdObject = new Bird()
+            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
             {
-                Specie = species_tb.Text,
-                SubSpecie = subspecies_tb.Text,
-                HatchingDate = datePicker.SelectedDate.Value,
-                Sex = sex_tb.Text,
-                CageNumber = cage_tb.Text
-            };
-            var result = from cage in db.Cage
-                         where (cage_tb.Text == cage.SerialNumber)
-                         select cage;
-
-            if (!result.Any())
-            {
-                MessageBox.Show("The cage number does not exist.");
+                MessageBox.Show("Enter M/male or F/female");
+                return;
             }
+
             else
             {
-                db.Bird.Add(birdObject);
-                db.SaveChanges();
-                this.gridBird.ItemsSource = db.Bird.ToList();
+
+                BirdsControlDBEntities db = new BirdsControlDBEntities();
+
+                Bird birdObject = new Bird()
+                {
+                    Specie = species_tb.Text,
+                    SubSpecie = subspecies_tb.Text,
+                    HatchingDate = datePicker.SelectedDate.Value,
+                    Sex = sex_tb.Text,
+                    CageNumber = cage_tb.Text
+                };
+                var result = from cage in db.Cage
+                             where (cage_tb.Text == cage.SerialNumber)
+                             select cage;
+
+                if (!result.Any())
+                {
+                    MessageBox.Show("The cage number does not exist.");
+                }
+                else
+                {
+                    db.Bird.Add(birdObject);
+                    db.SaveChanges();
+                    this.gridBird.ItemsSource = db.Bird.ToList();
+                }
             }
         }
 
