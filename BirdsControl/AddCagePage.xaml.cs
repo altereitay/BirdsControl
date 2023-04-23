@@ -26,8 +26,15 @@ namespace BirdsControl
         }
         private void AddCage_btn_Click(object sender, RoutedEventArgs e)
         {
-            BirdsControlDBEntities db = new BirdsControlDBEntities();
+            if (string.IsNullOrWhiteSpace(SerialNumber_tb.Text) || string.IsNullOrWhiteSpace(Length_tb.Text) ||
+                string.IsNullOrWhiteSpace(Width_tb.Text) || string.IsNullOrWhiteSpace(Height_tb.Text) ||
+                Material_drop.SelectedItem == null)
+            {
+                MessageBox.Show("Please fill in all the fields before adding a cage.");
+                return;
+            }
 
+            BirdsControlDBEntities db = new BirdsControlDBEntities();
 
             var result = from cage in db.Cage
                          where (SerialNumber_tb.Text == cage.SerialNumber)
@@ -50,11 +57,8 @@ namespace BirdsControl
             }
             else
             {
-                MessageBox.Show("Cage is already exists");
+                MessageBox.Show("Cage already exists.");
             }
-
-
-
         }
 
         private void HomePage_btn_Click(object sender, RoutedEventArgs e)

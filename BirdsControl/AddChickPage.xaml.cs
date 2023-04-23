@@ -21,6 +21,7 @@ namespace BirdsControl
     public partial class AddChickPage : Page
     {
         Bird temp = new Bird();
+
         public AddChickPage(Bird bird)
         {
             InitializeComponent();
@@ -29,17 +30,23 @@ namespace BirdsControl
             this.subspecies_tb.Text = bird.SubSpecie;
             this.cage_tb.Text = bird.CageNumber;
 
-            if (bird.Sex == "Male" || bird.Sex == "male")
-                this.dadId_tb.Text = bird.Id.ToString();
-
-            if (bird.Sex == "Female" || bird.Sex == "female")
-                this.momId_tb.Text = bird.Id.ToString();
+            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
+            {
+                MessageBox.Show("Enter M/male or F/female");
+                return;
+            }
             temp = bird;
         }
 
         private void AddBird_btn_Click(object sender, RoutedEventArgs e)
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
+            if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
+                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
+            {
+                MessageBox.Show("Please fill in all the fields before adding a bird.");
+                return;
+            }
 
             Bird birdObject = new Bird()
             {

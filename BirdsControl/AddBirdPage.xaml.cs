@@ -26,29 +26,46 @@ namespace BirdsControl
         }
         private void AddBird_btn_Click(object sender, RoutedEventArgs e)
         {
-            BirdsControlDBEntities db = new BirdsControlDBEntities();
-
-            Bird birdObject = new Bird()
+            if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
+                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
             {
-                Specie = species_tb.Text,
-                SubSpecie = subspecies_tb.Text,
-                HatchingDate = datePicker.SelectedDate.Value,
-                Sex = sex_tb.Text,
-                CageNumber = cage_tb.Text
-            };
-            var result = from cage in db.Cage
-                         where (cage_tb.Text == cage.SerialNumber)
-                         select cage;
-
-            if (!result.Any())
-            {
-                MessageBox.Show("The cage number Does not exist");
+                MessageBox.Show("Please fill in all the fields before adding a bird.");
+                return;
             }
+
+            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
+            {
+                MessageBox.Show("Enter M/male or F/female");
+                return;
+            }
+
             else
             {
-                db.Bird.Add(birdObject);
-                db.SaveChanges();
-                this.gridBird.ItemsSource = db.Bird.ToList();
+
+                BirdsControlDBEntities db = new BirdsControlDBEntities();
+
+                Bird birdObject = new Bird()
+                {
+                    Specie = species_tb.Text,
+                    SubSpecie = subspecies_tb.Text,
+                    HatchingDate = datePicker.SelectedDate.Value,
+                    Sex = sex_tb.Text,
+                    CageNumber = cage_tb.Text
+                };
+                var result = from cage in db.Cage
+                             where (cage_tb.Text == cage.SerialNumber)
+                             select cage;
+
+                if (!result.Any())
+                {
+                    MessageBox.Show("The cage number does not exist.");
+                }
+                else
+                {
+                    db.Bird.Add(birdObject);
+                    db.SaveChanges();
+                    this.gridBird.ItemsSource = db.Bird.ToList();
+                }
             }
         }
 
