@@ -41,7 +41,7 @@ namespace BirdsControl
             }
         }
 
-        private void updateCage_btn_Click(object sender, RoutedEventArgs e)
+        public void updateCage_btn_Click(object sender, RoutedEventArgs e)
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
             if (string.IsNullOrWhiteSpace(SerialNumber_tb.Text) || string.IsNullOrWhiteSpace(Length_tb.Text) ||

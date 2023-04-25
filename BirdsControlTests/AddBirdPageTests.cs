@@ -15,31 +15,24 @@ namespace BirdsControl.Tests
         public void AddBird_btn_ClickTest()
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
-
             Bird birdObject = new Bird()
             {
                 Specie = "toki",
                 SubSpecie = "super-toki",
                 HatchingDate = new DateTime(2004, 06, 03),
                 Sex = "male",
-                CageNumber = "2"
+                CageNumber = "1"
             };
-
             db.Bird.Add(birdObject);
             db.SaveChanges();
 
-            var bird = from d in db.Bird
-                    where d.Specie == "toki"
-                    where d.Sex == "male"
-                    where d.SubSpecie == "super-toki"
-                    where d.HatchingDate == new DateTime(2004, 06, 03)
-                    where d.CageNumber == "2"
-                    select d;
+            // Query for the added bird object using its Id
+            var addedBird = db.Bird.SingleOrDefault(b => b.Id == birdObject.Id);
 
-            Assert.IsNotNull(bird);
+            // Verify that the added bird object was found
+            Assert.IsNotNull(addedBird);
 
-            db.Bird.Remove(birdObject);
-            db.SaveChanges();
+            
         }
     }
 }

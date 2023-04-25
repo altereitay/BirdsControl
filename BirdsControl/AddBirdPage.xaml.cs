@@ -26,6 +26,7 @@ namespace BirdsControl
         }
         public void AddBird_btn_Click(object sender, RoutedEventArgs e)
         {
+
             if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
                 datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
             {

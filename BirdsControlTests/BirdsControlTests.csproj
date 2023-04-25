@@ -64,6 +64,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AddBirdPageTests.cs" />
+    <Compile Include="UpdateCagePageTests.cs" />
     <Compile Include="WpfTestMethodAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -38,3 +38,43 @@ C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\B
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControlTests\bin\Debug\tr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControlTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControlTests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControlDB.mdf
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControlDB_log.ldf
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControlTests.dll.config
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControlTests.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControlTests.pdb
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControl.exe
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\EntityFramework.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\MaterialDesignColors.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControl.pdb
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\BirdsControl.exe.config
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\EntityFramework.xml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\cs\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\de\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\it\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\ja\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\ko\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\pt-BR\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\tr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\obj\Debug\BirdsControlTests.csproj.AssemblyReference.cache
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\obj\Debug\BirdsControlTests.csproj.CoreCompileInputs.cache
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\obj\Debug\BirdsControlTests.csproj.CopyComplete
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\obj\Debug\BirdsControlTests.dll
+C:\Users\gofma\OneDrive\שולחן העבודה\BirdsControl\BirdsControl\BirdsControlTests\obj\Debug\BirdsControlTests.pdb
