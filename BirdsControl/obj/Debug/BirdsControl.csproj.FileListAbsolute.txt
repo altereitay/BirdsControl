@@ -219,13 +219,6 @@ C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\B
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\BirdsControl.exe.config
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\BirdsControl.exe
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\BirdsControl.pdb
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\EntityFramework.xml
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\MaterialDesignColors.pdb
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.AssemblyReference.cache
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.SuggestedBindingRedirects.cache
 C:\Users\alter\Desktop\school\Second_Year\Second_semester\testing_and_quallity\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.ResolveComReference.cache
