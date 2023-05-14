@@ -263,13 +263,6 @@ C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\BirdsCon
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\BirdsControl.exe.config
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\BirdsControl.exe
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\BirdsControl.pdb
-C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\EntityFramework.xml
-C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\MaterialDesignColors.pdb
-C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.AssemblyReference.cache
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.SuggestedBindingRedirects.cache
 C:\Users\niron\Desktop\BirdsControl\BirdsControl\BirdsControl\obj\Debug\BirdsControl.csproj.ResolveComReference.cache
