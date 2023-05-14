@@ -33,6 +33,17 @@ namespace BirdsControl
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
             }
+            if (!species_tb.Text.All(char.IsLetter))
+            {
+                MessageBox.Show("The species name should contain only letters.");
+                return;
+            }
+            if (!subspecies_tb.Text.All(char.IsLetter))
+            {
+                MessageBox.Show("The Subspecies name should contain only letters.");
+                return;
+            }
+
 
             if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
             {
