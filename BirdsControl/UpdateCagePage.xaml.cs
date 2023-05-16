@@ -20,6 +20,7 @@ namespace BirdsControl
     /// </summary>
     public partial class UpdateCagePage : Page
     {
+        string cagenum;
         public UpdateCagePage()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace BirdsControl
                     this.Width_tb.Text = t.Width.ToString();
                     this.Height_tb.Text = t.Height.ToString();
                     this.updatingTableId = t.Id;
+                    cagenum = t.SerialNumber;
                 }
             }
         }
@@ -52,6 +54,9 @@ namespace BirdsControl
                 return;
             }
 
+
+
+
             var r = from d in db.Cage
                     where d.Id == this.updatingTableId
                     select d;
@@ -59,6 +64,15 @@ namespace BirdsControl
             var result = from cage in db.Cage
                          where (SerialNumber_tb.Text == cage.SerialNumber)
                          select cage;
+
+            var bird = from b in db.Bird
+                       where b.CageNumber == cagenum
+                       select b;
+            foreach(var b in bird )
+            {
+                b.CageNumber = this.SerialNumber_tb.Text;
+            }
+
 
             if (!result.Any())
             {
