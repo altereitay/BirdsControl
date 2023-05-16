@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms.VisualStyles;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -30,11 +31,16 @@ namespace BirdsControl
             this.subspecies_tb.Text = bird.SubSpecie;
             this.cage_tb.Text = bird.CageNumber;
 
-            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
+            if(bird.Sex == "Male" || bird.Sex == "male")
             {
-                MessageBox.Show("Enter M/male or F/female");
-                return;
+                this.dadId_tb.Text = bird.Id.ToString();
             }
+            else if(bird.Sex == "Female" || bird.Sex == "female")
+            {
+                this.momId_tb.Text = bird.Id.ToString();
+            }
+
+          
             temp = bird;
         }
 
