@@ -33,6 +33,22 @@ namespace BirdsControl
                 MessageBox.Show("Please fill in all the fields before adding a cage.");
                 return;
             }
+            if (!Length_tb.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("The length should contain only digits.");
+                return;
+            }
+            if (!Width_tb.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("The width should contain only digits.");
+                return;
+            }
+            if (!Height_tb.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("The height should contain only digits.");
+                return;
+            }
+
 
             BirdsControlDBEntities db = new BirdsControlDBEntities();
 
