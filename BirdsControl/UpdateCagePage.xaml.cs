@@ -66,6 +66,41 @@ namespace BirdsControl
                 return;
             }
 
+            if (!float.TryParse(Length_tb.Text, out float length))
+            {
+                MessageBox.Show("The length should contain a valid number.");
+                return;
+            }
+            if (!float.TryParse(Width_tb.Text, out float width))
+            {
+                MessageBox.Show("The length should contain a valid number.");
+                return;
+            }
+            if (!float.TryParse(Height_tb.Text, out float height))
+            {
+                MessageBox.Show("The length should contain a valid number.");
+                return;
+            }
+
+
+            if (length < 0)
+            {
+                MessageBox.Show("The length should be positive.");
+                return;
+            }
+            if (width < 0)
+            {
+                MessageBox.Show("The width should be positive.");
+                return;
+            }
+            if (height < 0)
+            {
+                MessageBox.Show("The height should be positive.");
+                return;
+            }
+
+
+
             var r = from d in db.Cage
                     where d.Id == this.updatingTableId
                     select d;
