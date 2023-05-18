@@ -10,11 +10,25 @@
 
     <Grid>
         <Label x:Name="species_label" Content="Species: " HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
-        <TextBox x:Name="species_tb" HorizontalAlignment="Left" Margin="162,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
+        <ComboBox x:Name="speciesComboBox"
+          HorizontalAlignment="Left"
+          Margin="162,66,0,0"
+          VerticalAlignment="Top"
+          Width="150"
+          SelectionChanged="speciesComboBox_SelectionChanged">
+            <ComboBoxItem Content="American Gouldian"/>
+            <ComboBoxItem Content="European Gouldian"/>
+            <ComboBoxItem Content="Australian Gouldian"/>
+        </ComboBox>
         <Label x:Name="subspecies_label" Content="Subspecies: " HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="101" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="33"/>
-        <TextBox x:Name="subspecies_tb" HorizontalAlignment="Left" Margin="162,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
+        <ComboBox x:Name="subComboBox"
+          HorizontalAlignment="Left"
+          Margin="162,115,0,0"
+          VerticalAlignment="Top"
+          Width="150">
+        </ComboBox>
         <Label x:Name="hatch_label" Content="Hatch Date: " HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="111" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="32"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="162,155,0,0" VerticalAlignment="Top" Width="150" Height="26"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="162,155,0,0" VerticalAlignment="Top" Width="150" Height="26"  Loaded="datePicker_Loaded" />
         <Label x:Name="sex_label" Content="Sex: " HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
         <TextBox x:Name="sex_tb" HorizontalAlignment="Left" Margin="162,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
         <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>

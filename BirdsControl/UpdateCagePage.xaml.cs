@@ -33,6 +33,18 @@ namespace BirdsControl
                 if (this.gridCage.SelectedItems[0].GetType() == typeof(Cage))
                 {
                     Cage t = (Cage)this.gridCage.SelectedItems[0];
+
+                    int indexspe = -1;
+
+                    foreach (ComboBoxItem item in Material_drop.Items)
+                    {
+                        if (item.Content.ToString() == t.Material.TrimStart())
+                        {
+                            indexspe = Material_drop.Items.IndexOf(item);
+                            break;
+                        }
+                    }
+                    Material_drop.SelectedIndex = indexspe;
                     this.SerialNumber_tb.Text = t.SerialNumber;
                     this.Length_tb.Text = t.Length.ToString();
                     this.Width_tb.Text = t.Width.ToString();
@@ -54,6 +66,38 @@ namespace BirdsControl
                 return;
             }
 
+            if (!float.TryParse(Length_tb.Text, out float length))
+            {
+                MessageBox.Show("The length should contain a valid number.");
+                return;
+            }
+            if (!float.TryParse(Width_tb.Text, out float width))
+            {
+                MessageBox.Show("The length should contain a valid number.");
+                return;
+            }
+            if (!float.TryParse(Height_tb.Text, out float height))
+            {
+                MessageBox.Show("The length should contain a valid number.");
+                return;
+            }
+
+
+            if (length < 0)
+            {
+                MessageBox.Show("The length should be positive.");
+                return;
+            }
+            if (width < 0)
+            {
+                MessageBox.Show("The width should be positive.");
+                return;
+            }
+            if (height < 0)
+            {
+                MessageBox.Show("The height should be positive.");
+                return;
+            }
 
 
 
@@ -86,14 +130,24 @@ namespace BirdsControl
                     obj.Height = int.Parse(this.Height_tb.Text);
                     obj.Material = Material_drop.SelectedItem.ToString().Split(':')[1];
                 }
-
-                db.SaveChanges();
-                this.gridCage.ItemsSource = db.Cage.ToList();
+     
             }
             else
             {
+                Cage obj=result.SingleOrDefault();
+                if(obj.SerialNumber== cagenum)
+                {
+                    obj.SerialNumber = this.SerialNumber_tb.Text;
+                    obj.Length = int.Parse(this.Length_tb.Text);
+                    obj.Width = int.Parse(this.Width_tb.Text);
+                    obj.Height = int.Parse(this.Height_tb.Text);
+                    obj.Material = Material_drop.SelectedItem.ToString().Split(':')[1];
+                }
+                else 
                 MessageBox.Show("Cage is already exists");
             }
+            db.SaveChanges();
+            this.gridCage.ItemsSource = db.Cage.ToList();
         }
 
         private void LoadCages_btn_Click(object sender, RoutedEventArgs e)

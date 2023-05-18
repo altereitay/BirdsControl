@@ -43,7 +43,12 @@ namespace BirdsControl
           
             temp = bird;
         }
-
+        private void datePicker_Loaded(object sender, RoutedEventArgs e)
+        {
+            datePicker.SelectedDate = DateTime.Today;
+            datePicker.DisplayDateStart = DateTime.Today.AddYears(-15);
+            datePicker.DisplayDateEnd = DateTime.Today;
+        }
         private void AddBird_btn_Click(object sender, RoutedEventArgs e)
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
@@ -66,6 +71,7 @@ namespace BirdsControl
             };
             db.Bird.Add(birdObject);
             db.SaveChanges();
+            MessageBox.Show("Chick Added Successfully");
 
         }
     }

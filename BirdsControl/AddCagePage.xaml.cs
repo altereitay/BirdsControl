@@ -33,21 +33,40 @@ namespace BirdsControl
                 MessageBox.Show("Please fill in all the fields before adding a cage.");
                 return;
             }
-            if (!Length_tb.Text.All(char.IsDigit))
+            if (!float.TryParse(Length_tb.Text, out float length))
             {
-                MessageBox.Show("The length should contain only digits.");
+                MessageBox.Show("The length should contain a valid number.");
                 return;
             }
-            if (!Width_tb.Text.All(char.IsDigit))
+            if (!float.TryParse(Width_tb.Text, out float width))
             {
-                MessageBox.Show("The width should contain only digits.");
+                MessageBox.Show("The length should contain a valid number.");
                 return;
             }
-            if (!Height_tb.Text.All(char.IsDigit))
+            if (!float.TryParse(Height_tb.Text, out float height))
             {
-                MessageBox.Show("The height should contain only digits.");
+                MessageBox.Show("The length should contain a valid number.");
                 return;
             }
+
+
+
+            if (length<0)
+            {
+                MessageBox.Show("The length should be positive.");
+                return;
+            }
+            if (width<0)
+            {
+                MessageBox.Show("The width should be positive.");
+                return;
+            }
+            if (height<0)
+            {
+                MessageBox.Show("The height should be positive.");
+                return;
+            }
+
 
 
             BirdsControlDBEntities db = new BirdsControlDBEntities();
@@ -61,9 +80,9 @@ namespace BirdsControl
                 Cage cageObject = new Cage()
                 {
                     SerialNumber = SerialNumber_tb.Text,
-                    Length = int.Parse(Length_tb.Text),
-                    Width = int.Parse(Width_tb.Text),
-                    Height = int.Parse(Height_tb.Text),
+                    Length = (int)length,
+                    Width =(int)width,
+                    Height=  (int)height,
                     Material = Material_drop.SelectedItem.ToString().Split(':')[1]
                 };
                 db.Cage.Add(cageObject);

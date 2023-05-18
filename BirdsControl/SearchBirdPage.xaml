@@ -12,8 +12,15 @@
         <Label x:Name="species_label" Content="Species: " HorizontalAlignment="Left" Margin="24,93,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="34" />
-        <TextBox x:Name="species_tb" HorizontalAlignment="Left" Margin="176,98,0,0" TextWrapping="Wrap" Text=""
-                 VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
+        <ComboBox x:Name="speciesComboBox"
+          HorizontalAlignment="Left"
+          Margin="176,98,0,0"
+          VerticalAlignment="Top"
+          Width="150">
+            <ComboBoxItem Content="American Gouldian"/>
+            <ComboBoxItem Content="European Gouldian"/>
+            <ComboBoxItem Content="Australian Gouldian"/>
+        </ComboBox>
         <Label x:Name="id_label" Content="Id: " HorizontalAlignment="Left" Margin="24,136,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="114" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="33" />
