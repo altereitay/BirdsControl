@@ -11,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -31,21 +32,43 @@ namespace BirdsControl
         private void Search_bird_Click(object sender, RoutedEventArgs e)
         {
             var query = "SELECT * FROM Bird";
-            var specie = SanitizeInput(this.species_tb.Text);
-            var id = SanitizeInput(this.id_tb.Text);
-            var dateString = SanitizeInput(this.datePicker.Text);
+            string specie = "";
+            if (speciesComboBox.SelectedItem != null)
+            {
+                specie = speciesComboBox.SelectedItem.ToString().Split(':')[1].TrimStart();
+            }
+            var id = this.id_tb.Text.Trim();
+            var dateString = this.datePicker.Text.Trim();
             DateTime date = default;
-            var sex = SanitizeInput(this.sex_tb.Text);
-            var cage = SanitizeInput(this.cage_tb.Text);
+            var sex = this.sex_tb.Text.Trim();
+            var cage = this.cage_tb.Text.Trim();
             var whereClause = "";
-
+            int parsedId;
             if (!string.IsNullOrEmpty(specie))
             {
-                whereClause += "WHERE Specie = @specie";
+                if (specie == "American Gouldian")
+                {
+                    whereClause += "WHERE Specie LIKE '%American Gouldian%'";
+                }
+                else if (specie == "European Gouldian")
+                {
+                    whereClause += "WHERE Specie LIKE '%European Gouldian%'";
+                }
+                else
+                {
+                    whereClause += "WHERE Specie LIKE '%Australian Gouldian%'";
+                }
+
             }
 
             if (!string.IsNullOrEmpty(id))
             {
+                if (!int.TryParse(id, out parsedId))
+                {
+                    MessageBox.Show("Please enter a valid numeric ID.", "Invalid ID", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
                 if (string.IsNullOrEmpty(whereClause))
                 {
                     whereClause += "WHERE ";
@@ -56,6 +79,27 @@ namespace BirdsControl
                 }
 
                 whereClause += "Id = @id";
+            }
+
+            // Validate sex (allowed values: Male, Female)
+            if (!string.IsNullOrEmpty(sex))
+            {
+                if (sex != "Male" && sex != "Female")
+                {
+                    MessageBox.Show("Please enter either 'Male' or 'Female' for the sex.", "Invalid Sex", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(whereClause))
+                {
+                    whereClause += "WHERE ";
+                }
+                else
+                {
+                    whereClause += " AND ";
+                }
+
+                whereClause += "Sex = @sex";
             }
 
             if (!string.IsNullOrEmpty(dateString))
@@ -71,20 +115,6 @@ namespace BirdsControl
                 }
 
                 whereClause += "HatchingDate = @date";
-            }
-
-            if (!string.IsNullOrEmpty(sex))
-            {
-                if (string.IsNullOrEmpty(whereClause))
-                {
-                    whereClause += "WHERE ";
-                }
-                else
-                {
-                    whereClause += " AND ";
-                }
-
-                whereClause += "Sex = @sex";
             }
 
             if (!string.IsNullOrEmpty(cage))
@@ -113,13 +143,14 @@ namespace BirdsControl
                     var results = db.Bird.SqlQuery(query,
                         new SqlParameter("@specie", specie),
                         new SqlParameter("@id", id),
-                        new SqlParameter("@date", dateString),
+                        new SqlParameter("@date", DBNull.Value),
                         new SqlParameter("@sex", sex),
                         new SqlParameter("@cage", cage)).ToList();
                     this.gridBird.ItemsSource = results.ToList();
                 }
                 return;
             }
+
             using (BirdsControlDBEntities db = new BirdsControlDBEntities())
             {
                 var results = db.Bird.SqlQuery(query,

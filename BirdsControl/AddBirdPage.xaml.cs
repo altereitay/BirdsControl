@@ -24,33 +24,63 @@ namespace BirdsControl
         {
             InitializeComponent();
         }
+        private void datePicker_Loaded(object sender, RoutedEventArgs e)
+        {
+            datePicker.SelectedDate = DateTime.Today;
+            datePicker.DisplayDateStart = DateTime.Today.AddYears(-15);
+            datePicker.DisplayDateEnd = DateTime.Today;
+        }
+        private void speciesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (speciesComboBox.SelectedItem != null)
+            {
+                string selectedSpecies = (speciesComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+
+                // Clear the items of the subComboBox
+                subComboBox.Items.Clear();
+
+                // Enable or disable options in the subComboBox based on the selected species
+                if (selectedSpecies == "American Gouldian")
+                {
+                    subComboBox.IsEnabled = true;
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "North America" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Central America" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "South America" });
+                }
+                else if (selectedSpecies == "European Gouldian")
+                {
+                    subComboBox.IsEnabled = true;
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "East Europe" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Western Europe" });
+                }
+                else if (selectedSpecies == "Australian Gouldian")
+                {
+                    subComboBox.IsEnabled = true;
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Central Australia" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Coastal Cities" });
+                }
+                else
+                {
+                    subComboBox.IsEnabled = false;
+                }
+            }
+        }
+
         public void AddBird_btn_Click(object sender, RoutedEventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
+            if (speciesComboBox.SelectedItem==null || subComboBox.SelectedItem==null ||
                 datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
             }
-            if (!species_tb.Text.All(char.IsLetter))
-            {
-                MessageBox.Show("The species name should contain only letters.");
-                return;
-            }
-            if (!subspecies_tb.Text.All(char.IsLetter))
-            {
-                MessageBox.Show("The Subspecies name should contain only letters.");
-                return;
-            }
-
-
+         
             if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
             {
                 MessageBox.Show("Enter M/male or F/female");
                 return;
             }
-
             else
             {
 
@@ -58,8 +88,8 @@ namespace BirdsControl
 
                 Bird birdObject = new Bird()
                 {
-                    Specie = species_tb.Text,
-                    SubSpecie = subspecies_tb.Text,
+                    Specie = speciesComboBox.SelectedItem.ToString().Split(':')[1].TrimStart(),
+                    SubSpecie = subComboBox.SelectedItem.ToString().Split(':')[1],
                     HatchingDate = datePicker.SelectedDate.Value,
                     Sex = sex_tb.Text,
                     CageNumber = cage_tb.Text

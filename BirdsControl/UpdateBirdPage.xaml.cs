@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,10 +26,56 @@ namespace BirdsControl
         {
             InitializeComponent();
         }
+        private void datePicker_Loaded(object sender, RoutedEventArgs e)
+        {
+            datePicker.SelectedDate = DateTime.Today;
+            datePicker.DisplayDateStart = DateTime.Today.AddYears(-15);
+            datePicker.DisplayDateEnd = DateTime.Today;
+        }
+        private void speciesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (speciesComboBox.SelectedItem != null)
+            {
+                string selectedSpecies = (speciesComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+
+                // Clear the items of the subComboBox
+                subComboBox.Items.Clear();
+
+                // Enable or disable options in the subComboBox based on the selected species
+                if (selectedSpecies == "American Gouldian")
+                {
+                    subComboBox.IsEnabled = true;
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "North America" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Central America" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "South America" });
+                }
+                else if (selectedSpecies == "European Gouldian")
+                {
+                    subComboBox.IsEnabled = true;
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "East Europe" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Western Europe" });
+                }
+                else if (selectedSpecies == "Australian Gouldian")
+                {
+                    subComboBox.IsEnabled = true;
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Central Australia" });
+                    subComboBox.Items.Add(new ComboBoxItem() { Content = "Coastal Cities" });
+                }
+                else
+                {
+                    subComboBox.IsEnabled = false;
+                }
+            }
+        }
+
+
+
+
+
         private void Update_bird_Click(object sender, RoutedEventArgs e)
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
-            if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
+            if (speciesComboBox.SelectedItem == null || subComboBox.SelectedItem == null ||
                 datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
@@ -61,10 +109,9 @@ namespace BirdsControl
                 Bird obj = r.SingleOrDefault();
                 if (obj != null)
                 {
-                    obj.Specie = this.species_tb.Text;
-                    obj.SubSpecie = this.subspecies_tb.Text;
+                    obj.Specie = speciesComboBox.SelectedItem.ToString().Split(':')[1];
+                    obj.SubSpecie = subComboBox.SelectedItem.ToString().Split(':')[1];
                     obj.HatchingDate = this.datePicker.SelectedDate.Value;
-
                     obj.Sex = this.sex_tb.Text;
                     obj.CageNumber = this.cage_tb.Text;
                 }
@@ -87,16 +134,37 @@ namespace BirdsControl
         {
             if (this.gridBird.SelectedIndex >= 0 && this.gridBird.SelectedItems.Count >= 0)
             {
-                if (this.gridBird.SelectedItems[0].GetType() == typeof(Bird))
+                if (this.gridBird.SelectedItems[0] is Bird selectedBird)
                 {
-                    Bird t = (Bird)this.gridBird.SelectedItems[0];
-                    this.species_tb.Text = t.Specie;
-                    this.subspecies_tb.Text = t.SubSpecie;
-                    this.datePicker.Text = t.HatchingDate.ToString();
-                    this.sex_tb.Text = t.Sex;
-                    this.cage_tb.Text = t.CageNumber;
-                    this.updatingTableId = t.Id;
+                    int indexspe = -1;
+
+                    foreach (ComboBoxItem item in speciesComboBox.Items)
+                    {
+                        if (item.Content.ToString() == selectedBird.Specie.TrimStart())
+                        {
+                            indexspe = speciesComboBox.Items.IndexOf(item);
+                            break;
+                        }
+                    }
+                    speciesComboBox.SelectedIndex = indexspe;
+
+                    int indexsub = -1;
+
+                    foreach (ComboBoxItem item in subComboBox.Items)
+                    {
+                        if (item.Content.ToString() == selectedBird.SubSpecie.TrimStart())
+                        {
+                            indexsub = subComboBox.Items.IndexOf(item);
+                            break;
+                        }
+                    }
+                    subComboBox.SelectedIndex = indexsub;
+                    datePicker.Text = selectedBird.HatchingDate.ToString();
+                    sex_tb.Text = selectedBird.Sex;
+                    cage_tb.Text = selectedBird.CageNumber;
+                    updatingTableId = selectedBird.Id;
                 }
+            
             }
 
         }

@@ -14,7 +14,7 @@
         <Label x:Name="subspecies_label" Content="Subspecies: " HorizontalAlignment="Left" Margin="25,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="101" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="33"/>
         <TextBlock x:Name="subspecies_tb" HorizontalAlignment="Left" Margin="177,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
         <Label x:Name="hatch_label" Content="Hatch Date: " HorizontalAlignment="Left" Margin="25,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="111" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="32"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="177,175,0,0" VerticalAlignment="Top" Width="150" Height="26"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="177,175,0,0" VerticalAlignment="Top" Width="150" Height="26"  Loaded="datePicker_Loaded"/>
         <Label x:Name="sex_label" Content="Sex: " HorizontalAlignment="Left" Margin="25,218,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
         <TextBox x:Name="sex_tb" HorizontalAlignment="Left" Margin="177,223,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24"/>
         <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="25,262,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>

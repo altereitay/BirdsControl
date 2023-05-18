@@ -33,6 +33,18 @@ namespace BirdsControl
                 if (this.gridCage.SelectedItems[0].GetType() == typeof(Cage))
                 {
                     Cage t = (Cage)this.gridCage.SelectedItems[0];
+
+                    int indexspe = -1;
+
+                    foreach (ComboBoxItem item in Material_drop.Items)
+                    {
+                        if (item.Content.ToString() == t.Material.TrimStart())
+                        {
+                            indexspe = Material_drop.Items.IndexOf(item);
+                            break;
+                        }
+                    }
+                    Material_drop.SelectedIndex = indexspe;
                     this.SerialNumber_tb.Text = t.SerialNumber;
                     this.Length_tb.Text = t.Length.ToString();
                     this.Width_tb.Text = t.Width.ToString();
@@ -53,9 +65,6 @@ namespace BirdsControl
                 MessageBox.Show("Please fill in all the fields before adding a cage.");
                 return;
             }
-
-
-
 
             var r = from d in db.Cage
                     where d.Id == this.updatingTableId
