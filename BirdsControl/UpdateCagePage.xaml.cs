@@ -95,14 +95,24 @@ namespace BirdsControl
                     obj.Height = int.Parse(this.Height_tb.Text);
                     obj.Material = Material_drop.SelectedItem.ToString().Split(':')[1];
                 }
-
-                db.SaveChanges();
-                this.gridCage.ItemsSource = db.Cage.ToList();
+     
             }
             else
             {
+                Cage obj=result.SingleOrDefault();
+                if(obj.SerialNumber== cagenum)
+                {
+                    obj.SerialNumber = this.SerialNumber_tb.Text;
+                    obj.Length = int.Parse(this.Length_tb.Text);
+                    obj.Width = int.Parse(this.Width_tb.Text);
+                    obj.Height = int.Parse(this.Height_tb.Text);
+                    obj.Material = Material_drop.SelectedItem.ToString().Split(':')[1];
+                }
+                else 
                 MessageBox.Show("Cage is already exists");
             }
+            db.SaveChanges();
+            this.gridCage.ItemsSource = db.Cage.ToList();
         }
 
         private void LoadCages_btn_Click(object sender, RoutedEventArgs e)
