@@ -111,12 +111,12 @@ namespace BirdsControl
             {
                 if (!dad)
                 {
-                    MessageBox.Show("Dad Id doesnt exit");
+                    MessageBox.Show("Dad Id doesnt exist");
                     return;
                 }
                 else
                 {
-                    MessageBox.Show("Mom Id doesnt exit");
+                    MessageBox.Show("Mom Id doesnt exist");
                     return;
                 }
             }
