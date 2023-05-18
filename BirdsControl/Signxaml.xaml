@@ -36,17 +36,19 @@
                 <Image Source="/Images/Bird_logo.jpeg" Height="100"/>
                 <TextBlock Margin="0 25 0 5" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Text="Create New Account!"/>
                 <TextBlock FontSize="17" FontWeight="SemiBold" HorizontalAlignment="Center" Text="Enter your Details:"/>
-                <TextBox Margin="0 50 0 0" x:Name="email_tb" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Enter Email"
+                <TextBox Margin="0 50 0 0" x:Name="email_tb" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Enter Username"
                            BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource
-                            MaterialDesignOutlinedTextBox}"/>
+                            MaterialDesignOutlinedTextBox}" ToolTip="username must be between 6-8 and less than two digits" />
                 <TextBox Margin="0 50 0 0" x:Name="pass_tb" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Enter Password"
                            BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource
-                            MaterialDesignOutlinedTextBox}"/>
+                            MaterialDesignOutlinedTextBox}" ToolTip="password must be between 8-10 and must be sign"  />
                 <TextBox Margin="0 50 0 0" x:Name="Id" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Enter Your ID"
                            BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource
-                            MaterialDesignOutlinedTextBox}"/>
+                            MaterialDesignOutlinedTextBox}" ToolTip="must be 9 digits"/>
                 <Button Margin="0 20 0 0" x:Name="signup_btn" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
                         Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Create Account" Click="Button_Click"/>
+                <Button Margin="0 20 0 0" x:Name="Back" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        Height="45" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Log in" Click="Back_Click"/>
                 
             </StackPanel>
         </materialDesign:DialogHost>

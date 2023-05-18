@@ -106,7 +106,7 @@ namespace BirdsControl
             }
             else
             {
-                MessageBox.Show("User Name too short");
+                MessageBox.Show("User Name Does not meet the conditions");
             }
         }
         public bool IsDarkTheme { get; set; }
@@ -137,6 +137,16 @@ namespace BirdsControl
         {
             base.OnMouseLeftButtonDown(e);
             DragMove();
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+
+            Window1 login = new Window1();
+            this.Visibility = Visibility.Hidden;
+            login.Show();
+
+
         }
     }
 }
