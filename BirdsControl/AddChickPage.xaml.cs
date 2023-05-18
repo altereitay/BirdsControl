@@ -53,26 +53,73 @@ namespace BirdsControl
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
             if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
-                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
+                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text) ||
+                    string.IsNullOrWhiteSpace(dadId_tb.Text) || string.IsNullOrWhiteSpace(momId_tb.Text))
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
             }
-
-            Bird birdObject = new Bird()
+            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
             {
-                Specie = species_tb.Text,
-                SubSpecie = subspecies_tb.Text,
-                HatchingDate = datePicker.SelectedDate.Value,
-                Sex = sex_tb.Text,
-                CageNumber = cage_tb.Text,
-                DadID = int.Parse(dadId_tb.Text),
-                MomID = int.Parse(momId_tb.Text)
-            };
-            db.Bird.Add(birdObject);
-            db.SaveChanges();
-            MessageBox.Show("Chick Added Successfully");
+                MessageBox.Show("Enter M/male or F/female");
+                return;
+            }
+            if (!int.TryParse(momId_tb.Text, out int length))
+            {
+                MessageBox.Show("Mom Id should contain a valid number.");
+                return;
+            }
+            if (!int.TryParse(dadId_tb.Text, out int width))
+            {
+                MessageBox.Show("Dad ID should contain a valid number.");
+                return;
+            }
 
+
+
+            if (int.Parse(dadId_tb.Text)< 0 || int.Parse(momId_tb.Text)<0)
+            {
+                MessageBox.Show("Invalid Id");
+                return;
+            }
+            bool dad=false;
+            bool mom = false;
+
+            foreach(Bird b in db.Bird)
+            {
+                if(b.Id == int.Parse(dadId_tb.Text))
+                { dad = true; }
+                if (b.Id == int.Parse(momId_tb.Text))
+                { mom = true; }
+            }
+            if(dad && mom) {
+                Bird birdObject = new Bird()
+                {
+                    Specie = species_tb.Text,
+                    SubSpecie = subspecies_tb.Text,
+                    HatchingDate = datePicker.SelectedDate.Value,
+                    Sex = sex_tb.Text,
+                    CageNumber = cage_tb.Text,
+                    DadID = int.Parse(dadId_tb.Text),
+                    MomID = int.Parse(momId_tb.Text)
+                };
+                db.Bird.Add(birdObject);
+                db.SaveChanges();
+                MessageBox.Show("Chick Added Successfully");
+            }
+            else
+            {
+                if (!dad)
+                {
+                    MessageBox.Show("Dad Id doesnt exit");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Mom Id doesnt exit");
+                    return;
+                }
+            }
         }
     }
 }
