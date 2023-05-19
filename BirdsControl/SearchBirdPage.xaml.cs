@@ -43,7 +43,7 @@ namespace BirdsControl
             string sex = "";
             if (sexComboBox.SelectedItem != null)
             {
-                sex = sexComboBox.SelectedItem.ToString().Split(':')[1];
+                sex = sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart();
             }
             var cage = this.cage_tb.Text.Trim();
             var whereClause = "";

@@ -103,11 +103,13 @@ namespace BirdsControl
                 {
                     obj.Specie = speciesComboBox.SelectedItem.ToString().Split(':')[1];
                     obj.SubSpecie = subComboBox.SelectedItem.ToString().Split(':')[1];
-                    obj.HatchingDate = this.datePicker.SelectedDate.Value;
-                    obj.Sex = this.sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart();
+                    obj.HatchingDate = this.datePicker.SelectedDate.Value; 
+                    if (this.sexComboBox.SelectedItem != null)
+                    {
+                        obj.Sex = this.sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart();
+                    }
                     obj.CageNumber = this.cage_tb.Text;
                 }
-
                 db.SaveChanges();
                 this.gridBird.ItemsSource = db.Bird.ToList();
             }
@@ -178,8 +180,6 @@ namespace BirdsControl
               );
             if (msg == MessageBoxResult.Yes)
             {
-
-
                 BirdsControlDBEntities db = new BirdsControlDBEntities();
 
                 var r = from d in db.Bird
@@ -194,9 +194,6 @@ namespace BirdsControl
                 }
                 this.gridBird.ItemsSource = db.Bird.ToList();
             }
-
-
-
         }
     }
 }
