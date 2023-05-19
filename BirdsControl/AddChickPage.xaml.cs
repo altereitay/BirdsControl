@@ -53,7 +53,7 @@ namespace BirdsControl
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
             if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
-                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart()) || string.IsNullOrWhiteSpace(cage_tb.Text) ||
+                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(cage_tb.Text) ||
                     string.IsNullOrWhiteSpace(dadId_tb.Text) || string.IsNullOrWhiteSpace(momId_tb.Text) || sexComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
