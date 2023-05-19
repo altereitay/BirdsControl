@@ -24,6 +24,6 @@
         <TextBox x:Name="momId_tb" HorizontalAlignment="Left" Margin="177,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
         <Label x:Name="Dad_label_Copy" Content="Dad Id: " HorizontalAlignment="Left" Margin="25,348,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
         <TextBox x:Name="dadId_tb" HorizontalAlignment="Left" Margin="177,353,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
-        <Label x:Name="label" Content="Add Chick" FontSize="35" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="198" Margin="25,15,0,0"/>
+        <Label x:Name="label" Content="Add Chick" FontSize="35" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="198" Margin="25,15,0,0" FontFamily="Microsoft New Tai Lue"/>
     </Grid>
 </Page>

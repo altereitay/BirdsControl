@@ -76,19 +76,11 @@ namespace BirdsControl
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
             if (speciesComboBox.SelectedItem == null || subComboBox.SelectedItem == null ||
-                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
+                datePicker.SelectedDate == null ||  string.IsNullOrWhiteSpace(cage_tb.Text))
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
             }
-            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
-            {
-                MessageBox.Show("Enter M/male or F/female");
-                return;
-            }
-
-
-
 
             var r = from d in db.Bird
                     where d.Id == this.updatingTableId
@@ -112,7 +104,7 @@ namespace BirdsControl
                     obj.Specie = speciesComboBox.SelectedItem.ToString().Split(':')[1];
                     obj.SubSpecie = subComboBox.SelectedItem.ToString().Split(':')[1];
                     obj.HatchingDate = this.datePicker.SelectedDate.Value;
-                    obj.Sex = this.sex_tb.Text;
+                    obj.Sex = this.sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart();
                     obj.CageNumber = this.cage_tb.Text;
                 }
 
@@ -160,7 +152,7 @@ namespace BirdsControl
                     }
                     subComboBox.SelectedIndex = indexsub;
                     datePicker.Text = selectedBird.HatchingDate.ToString();
-                    sex_tb.Text = selectedBird.Sex;
+                    //sex_tb.Text = selectedBird.Sex;
                     cage_tb.Text = selectedBird.CageNumber;
                     updatingTableId = selectedBird.Id;
                 }

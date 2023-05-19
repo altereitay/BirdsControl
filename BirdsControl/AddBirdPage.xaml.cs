@@ -70,15 +70,9 @@ namespace BirdsControl
         {
 
             if (speciesComboBox.SelectedItem==null || subComboBox.SelectedItem==null ||
-                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text))
+                datePicker.SelectedDate == null  || string.IsNullOrWhiteSpace(cage_tb.Text))
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
-                return;
-            }
-         
-            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
-            {
-                MessageBox.Show("Enter M/male or F/female");
                 return;
             }
             else
@@ -91,7 +85,7 @@ namespace BirdsControl
                     Specie = speciesComboBox.SelectedItem.ToString().Split(':')[1].TrimStart(),
                     SubSpecie = subComboBox.SelectedItem.ToString().Split(':')[1],
                     HatchingDate = datePicker.SelectedDate.Value,
-                    Sex = sex_tb.Text,
+                    Sex = sexComboBox.SelectedItem.ToString(),
                     CageNumber = cage_tb.Text
                 };
                 var result = from cage in db.Cage

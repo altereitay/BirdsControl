@@ -40,7 +40,11 @@ namespace BirdsControl
             var id = this.id_tb.Text.Trim();
             var dateString = this.datePicker.Text.Trim();
             DateTime date = default;
-            var sex = this.sex_tb.Text.Trim();
+            string sex = "";
+            if (sexComboBox.SelectedItem != null)
+            {
+                sex = sexComboBox.SelectedItem.ToString().Split(':')[1];
+            }
             var cage = this.cage_tb.Text.Trim();
             var whereClause = "";
             int parsedId;

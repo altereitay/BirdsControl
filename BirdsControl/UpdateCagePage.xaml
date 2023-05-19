@@ -11,15 +11,15 @@
 
     <Grid>
         <Label x:Name="label" Content="Update Cage" FontSize="35" HorizontalAlignment="Left" Margin="34,20,0,0" VerticalAlignment="Top" Height="64" Width="234"/>
-        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="34,101,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="34,101,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBox x:Name="SerialNumber_tb" HorizontalAlignment="Left" Margin="176,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Height:" HorizontalAlignment="Left" Margin="34,132,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="34,132,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBox x:Name="Height_tb" HorizontalAlignment="Left" Margin="176,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Width:" HorizontalAlignment="Left" Margin="34,163,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Width:" HorizontalAlignment="Left" Margin="34,163,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBox x:Name="Width_tb" HorizontalAlignment="Left" Margin="176,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Length:" HorizontalAlignment="Left" Margin="34,194,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Length:" HorizontalAlignment="Left" Margin="34,194,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBox x:Name="Length_tb" HorizontalAlignment="Left" Margin="176,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Material:" HorizontalAlignment="Left" Margin="34,228,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Material:" HorizontalAlignment="Left" Margin="34,228,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <ComboBox x:Name="Material_drop" Margin="176,228,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
             <ComboBoxItem Content="Iron" />
             <ComboBoxItem Content="Wood" />
