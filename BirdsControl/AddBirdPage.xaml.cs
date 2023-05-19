@@ -85,7 +85,7 @@ namespace BirdsControl
                     Specie = speciesComboBox.SelectedItem.ToString().Split(':')[1].TrimStart(),
                     SubSpecie = subComboBox.SelectedItem.ToString().Split(':')[1],
                     HatchingDate = datePicker.SelectedDate.Value,
-                    Sex = sexComboBox.SelectedItem.ToString(),
+                    Sex = sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart(),
                     CageNumber = cage_tb.Text
                 };
                 var result = from cage in db.Cage
