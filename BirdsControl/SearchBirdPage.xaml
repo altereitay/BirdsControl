@@ -34,8 +34,14 @@
         <Label x:Name="sex_label" Content="Sex: " HorizontalAlignment="Left" Margin="24,227,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="77" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="34" />
-        <TextBox x:Name="sex_tb" HorizontalAlignment="Left" Margin="176,232,0,0" TextWrapping="Wrap" Text=""
-                 VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
+        <ComboBox x:Name="sexComboBox"
+          HorizontalAlignment="Left"
+          Margin="174,225,0,0"
+          VerticalAlignment="Top"
+          Width="150">
+            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem Content="Female"/>
+        </ComboBox>
         <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="24,271,0,0"
                VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16"
                FontFamily="Microsoft New Tai Lue" Height="34" />

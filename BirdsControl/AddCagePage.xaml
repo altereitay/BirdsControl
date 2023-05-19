@@ -9,24 +9,24 @@
       Title="AddCagePage">
 
     <Grid>
-        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="51,90,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="51,90,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBox x:Name="SerialNumber_tb" HorizontalAlignment="Left" Margin="193,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Height:" HorizontalAlignment="Left" Margin="51,121,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox x:Name="Height_tb" HorizontalAlignment="Left" Margin="193,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Width:" HorizontalAlignment="Left" Margin="51,152,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox x:Name="Width_tb" HorizontalAlignment="Left" Margin="193,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Length:" HorizontalAlignment="Left" Margin="51,183,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox x:Name="Length_tb" HorizontalAlignment="Left" Margin="193,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Material:" HorizontalAlignment="Left" Margin="51,217,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
-        <Button x:Name="AddCage_btn" Content="Add Cage" HorizontalAlignment="Left" Margin="211,265,0,0" VerticalAlignment="Top" Width="102" Height="30" Click="AddCage_btn_Click"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="51,121,0,0" VerticalAlignment="Top" Width="137" Height="33" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
+        <TextBox x:Name="Height_tb" HorizontalAlignment="Left" Margin="193,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="33"/>
+        <Label Content="Width:" HorizontalAlignment="Left" Margin="51,159,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
+        <TextBox x:Name="Width_tb" HorizontalAlignment="Left" Margin="193,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Length:" HorizontalAlignment="Left" Margin="51,196,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
+        <TextBox x:Name="Length_tb" HorizontalAlignment="Left" Margin="193,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Label Content="Material:" HorizontalAlignment="Left" Margin="51,240,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
+        <Button x:Name="AddCage_btn" Content="Add Cage" HorizontalAlignment="Left" Margin="211,298,0,0" VerticalAlignment="Top" Width="102" Height="30" Click="AddCage_btn_Click"/>
 
         <DataGrid x:Name="gridCage" Background="Transparent" HorizontalAlignment="Center" Margin="0,342,0,10" Width="780" />
 
-        <ComboBox x:Name="Material_drop" Margin="193,217,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
+        <ComboBox x:Name="Material_drop" Margin="193,240,0,0"  VerticalAlignment="Top" Width="120" Height="26" HorizontalAlignment="Left" >
             <ComboBoxItem Content="Iron" />
             <ComboBoxItem Content="Wood" />
             <ComboBoxItem Content="Plastic" />
         </ComboBox>
-        <Label x:Name="label" Content="Add Cage" FontSize="35" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Height="64" Width="162"/>
+        <Label x:Name="label" Content="Add Cage" FontSize="35" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Height="64" Width="162" FontFamily="Microsoft New Tai Lue"/>
     </Grid>
 </Page>

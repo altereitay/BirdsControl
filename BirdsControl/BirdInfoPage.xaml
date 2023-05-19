@@ -42,7 +42,7 @@
         <TextBlock x:Name="subspecies_tb" HorizontalAlignment="Left" Margin="178,175,0,0" TextWrapping="Wrap" Text=""
             VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="24" />
         <Button x:Name="AddChick" Content="Add Chick" HorizontalAlignment="Left" Margin="215,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,0.879" Width="113" Height="30" Click="AddChick_Click"/>
-        <Label x:Name="label" Content="Bird Information" FontSize="35" HorizontalAlignment="Left" Margin="253,10,0,0" VerticalAlignment="Top" Height="64" Width="400"/>
+        <Label x:Name="label" Content="Bird Information" FontSize="35" HorizontalAlignment="Left" Margin="253,10,0,0" VerticalAlignment="Top" Height="64" Width="400" FontFamily="Microsoft New Tai Lue"/>
 
     </Grid>
 </Page>

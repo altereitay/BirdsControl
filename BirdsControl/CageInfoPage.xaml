@@ -9,15 +9,15 @@
       Title="CageInfoPage">
 
     <Grid>
-        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="34,101,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Serial Number:" HorizontalAlignment="Left" Margin="34,101,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBlock x:Name="SerialNumber_tb" HorizontalAlignment="Left" Margin="176,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Height:" HorizontalAlignment="Left" Margin="34,132,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="34,132,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBlock x:Name="Height_tb" HorizontalAlignment="Left" Margin="176,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Width:" HorizontalAlignment="Left" Margin="34,163,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Width:" HorizontalAlignment="Left" Margin="34,163,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBlock x:Name="Width_tb" HorizontalAlignment="Left" Margin="176,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Length:" HorizontalAlignment="Left" Margin="34,194,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Length:" HorizontalAlignment="Left" Margin="34,194,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBlock x:Name="Length_tb" HorizontalAlignment="Left" Margin="176,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Label Content="Material:" HorizontalAlignment="Left" Margin="34,228,0,0" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Material:" HorizontalAlignment="Left" Margin="34,228,0,0" VerticalAlignment="Top" Width="137" Height="26" FontSize="16" FontFamily="Microsoft New Tai Lue"/>
         <TextBlock x:Name="Material_tb" HorizontalAlignment="Left" Margin="171,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26" RenderTransformOrigin="0.459,2.62"/>
         <DataGrid x:Name="gridCage" Background="Transparent" HorizontalAlignment="Center" Margin="0,342,0,10" Width="780"  />
         <Button x:Name="LoadBirds_btn" Content="Load Birds" HorizontalAlignment="Left" Margin="34,280,0,0" VerticalAlignment="Top" Width="106" Height="30" Click="LoadBirds_btn_Click"/>
