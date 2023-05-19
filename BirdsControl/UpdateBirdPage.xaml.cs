@@ -76,7 +76,7 @@ namespace BirdsControl
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
             if (speciesComboBox.SelectedItem == null || subComboBox.SelectedItem == null ||
-                datePicker.SelectedDate == null ||  string.IsNullOrWhiteSpace(cage_tb.Text))
+                datePicker.SelectedDate == null ||  string.IsNullOrWhiteSpace(cage_tb.Text) || sexComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
@@ -152,9 +152,19 @@ namespace BirdsControl
                             break;
                         }
                     }
+                    int sex = -1;
+                    foreach (ComboBoxItem item in sexComboBox.Items)
+                    {
+                        if (item.Content.ToString() == selectedBird.Sex.TrimStart())
+                        {
+                            sex = sexComboBox.Items.IndexOf(item);
+                            break;
+                        }
+                    }
+
                     subComboBox.SelectedIndex = indexsub;
                     datePicker.Text = selectedBird.HatchingDate.ToString();
-                    //sex_tb.Text = selectedBird.Sex;
+                    sexComboBox.SelectedIndex =sex;
                     cage_tb.Text = selectedBird.CageNumber;
                     updatingTableId = selectedBird.Id;
                 }

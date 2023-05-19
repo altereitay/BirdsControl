@@ -70,11 +70,12 @@ namespace BirdsControl
         {
 
             if (speciesComboBox.SelectedItem==null || subComboBox.SelectedItem==null ||
-                datePicker.SelectedDate == null  || string.IsNullOrWhiteSpace(cage_tb.Text))
+                datePicker.SelectedDate == null  || string.IsNullOrWhiteSpace(cage_tb.Text) || (sexComboBox.SelectedItem==null))
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
             }
+         
             else
             {
 
