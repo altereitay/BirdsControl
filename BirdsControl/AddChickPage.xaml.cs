@@ -76,15 +76,35 @@ namespace BirdsControl
             }
             bool dad=false;
             bool mom = false;
-
-            foreach(Bird b in db.Bird)
+            Bird dad1 = new Bird();
+            Bird mom1 = new Bird();
+            foreach (Bird b in db.Bird)
             {
                 if(b.Id == int.Parse(dadId_tb.Text))
-                { dad = true; }
+                { 
+                    dad = true;
+                    dad1 = b;
+                }
                 if (b.Id == int.Parse(momId_tb.Text))
-                { mom = true; }
+                { 
+                    mom = true;
+                    mom1 = b;
+                }
             }
             if(dad && mom) {
+                //dad1 mom1
+                DateTime momDate = mom1.HatchingDate.Value.Date;
+                DateTime dadDate = dad1.HatchingDate.Value.Date;
+                DateTime chickDate = datePicker.SelectedDate.Value;
+
+                int subMom = DateTime.Compare(chickDate, momDate);
+                int subDad = DateTime.Compare(chickDate, dadDate);
+                if (subMom <= 0 || subDad <= 0)
+                {
+                    MessageBox.Show("Chick cannot be hatched before its parents");
+                    return;
+                }
+
                 Bird birdObject = new Bird()
                 {
                     Specie = species_tb.Text,
@@ -111,6 +131,7 @@ namespace BirdsControl
                     MessageBox.Show("Mom Id doesnt exist");
                     return;
                 }
+                
             }
         }
     }
