@@ -53,13 +53,13 @@ namespace BirdsControl
         {
             BirdsControlDBEntities db = new BirdsControlDBEntities();
             if (string.IsNullOrWhiteSpace(species_tb.Text) || string.IsNullOrWhiteSpace(subspecies_tb.Text) ||
-                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sex_tb.Text) || string.IsNullOrWhiteSpace(cage_tb.Text) ||
+                datePicker.SelectedDate == null || string.IsNullOrWhiteSpace(sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart()) || string.IsNullOrWhiteSpace(cage_tb.Text) ||
                     string.IsNullOrWhiteSpace(dadId_tb.Text) || string.IsNullOrWhiteSpace(momId_tb.Text))
             {
                 MessageBox.Show("Please fill in all the fields before adding a bird.");
                 return;
             }
-            if (sex_tb.Text != "Male" && sex_tb.Text != "male" && sex_tb.Text != "Female" && sex_tb.Text != "female")
+            if (sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart() != "Male" && sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart() != "Female")
             {
                 MessageBox.Show("Enter M/male or F/female");
                 return;
@@ -74,9 +74,6 @@ namespace BirdsControl
                 MessageBox.Show("Dad ID should contain a valid number.");
                 return;
             }
-
-
-
             if (int.Parse(dadId_tb.Text)< 0 || int.Parse(momId_tb.Text)<0)
             {
                 MessageBox.Show("Invalid Id");
@@ -98,7 +95,7 @@ namespace BirdsControl
                     Specie = species_tb.Text,
                     SubSpecie = subspecies_tb.Text,
                     HatchingDate = datePicker.SelectedDate.Value,
-                    Sex = sex_tb.Text,
+                    Sex = sexComboBox.SelectedItem.ToString().Split(':')[1].TrimStart(),
                     CageNumber = cage_tb.Text,
                     DadID = int.Parse(dadId_tb.Text),
                     MomID = int.Parse(momId_tb.Text)

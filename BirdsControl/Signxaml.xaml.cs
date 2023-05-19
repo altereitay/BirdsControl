@@ -141,12 +141,9 @@ namespace BirdsControl
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-
             Window1 login = new Window1();
             this.Visibility = Visibility.Hidden;
             login.Show();
-
-
         }
     }
 }
