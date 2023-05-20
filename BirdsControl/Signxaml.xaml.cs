@@ -72,12 +72,6 @@ namespace BirdsControl
                                 MessageBox.Show("User Added");
                                 object[,] values = new object[1, 3] { { username, pass, id } };
                                 range.Value = values;
-                                workbook.Save();
-                                workbook.Close();
-                                Marshal.ReleaseComObject(worksheet);
-                                Marshal.ReleaseComObject(workbook);
-                                excel.Quit();
-                                Marshal.ReleaseComObject(excel);
                                 MainPage newWindow = new MainPage();
                                 this.Visibility = Visibility.Hidden;
                                 newWindow.Show();
@@ -108,6 +102,12 @@ namespace BirdsControl
             {
                 MessageBox.Show("User Name Does not meet the conditions");
             }
+            workbook.Save();
+            workbook.Close();
+            Marshal.ReleaseComObject(worksheet);
+            Marshal.ReleaseComObject(workbook);
+            excel.Quit();
+            Marshal.ReleaseComObject(excel);
         }
         public bool IsDarkTheme { get; set; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
