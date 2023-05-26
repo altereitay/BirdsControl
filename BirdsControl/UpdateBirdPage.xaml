@@ -40,12 +40,29 @@
         </ComboBox>
         <Label x:Name="cage_label" Content="Cage Number: " HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.882,-0.268" Width="124" FontSize="16" FontFamily="Microsoft New Tai Lue" Height="34"/>
         <TextBox x:Name="cage_tb" HorizontalAlignment="Left" Margin="162,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Microsoft New Tai Lue" RenderTransformOrigin="0.896,0.491" Height="24"/>
-        <Button x:Name="Update_bird" Content="Update Bird" HorizontalAlignment="Left" Margin="199,287,0,0" VerticalAlignment="Top" Width="113" Height="30" Click="Update_bird_Click"/>
+        <Button x:Name="Update_bird" 
+                Content="Update Bird"
+                HorizontalAlignment="Left"
+                Margin="200,287,0,0" 
+                VerticalAlignment="Top"
+                Width="115" Height="30" 
+                Click="Update_bird_Click"/>
         <DataGrid x:Name="gridBird" Background="Transparent" HorizontalAlignment="Center" Margin="0,337,0,10" Width="780" SelectionChanged="gridBird_SelectionChanged" />
-        <Button x:Name="Load_Birds" Content="Load Birds" HorizontalAlignment="Left" Margin="679,302,0,0" VerticalAlignment="Top" Width="101" Height="30" Click="Load_Birds_Click"/>
+        <Button x:Name="Load_Birds" 
+                Content="Load Birds" 
+                HorizontalAlignment="Left" 
+                Margin="353,287,0,0" 
+                VerticalAlignment="Top" 
+                Width="115" Height="30" 
+                Click="Load_Birds_Click"/>
         <Label x:Name="label" Content="Update Bird" FontSize="35" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" Height="64" Width="206"/>
-        <Button x:Name="Delete_bird" Content="Delete Bird" HorizontalAlignment="Left" Margin="60,287,0,0" VerticalAlignment="Top" Width="114" Height="30" Click="Delete_bird_Click"/>
-
-
+        <Button x:Name="Delete_bird" 
+                Content="Delete Bird" 
+                HorizontalAlignment="Left" 
+                Margin="60,287,0,0" 
+                VerticalAlignment="Top" 
+                Width="115" Height="30" 
+                Click="Delete_bird_Click"/>
+        <Image Margin="565,26,20,269" Source="/birds2.jpg"/>
     </Grid>
 </Page>

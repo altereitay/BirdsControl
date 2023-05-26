@@ -53,5 +53,6 @@
         </Button>
         <DataGrid x:Name="gridBird" Background="Transparent" HorizontalAlignment="Center" Margin="0,342,0,10" Width="780" />
         <Label x:Name="label" Content="Add Bird" FontSize="35" HorizontalAlignment="Left" Margin="22,10,0,0" VerticalAlignment="Top" Height="64" Width="162" />
+        <Image Source="/birds1.jpeg" Margin="589,31,24,247"/>
     </Grid>
 </Page>
