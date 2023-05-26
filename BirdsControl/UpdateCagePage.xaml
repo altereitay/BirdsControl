@@ -25,18 +25,18 @@
             <ComboBoxItem Content="Wood" />
             <ComboBoxItem Content="Plastic" />
         </ComboBox>
-        <Button x:Name="updateCage_btn" Content="Update Cage" HorizontalAlignment="Left" Margin="181,269,0,0" VerticalAlignment="Top" Width="115" Height="30" Click="updateCage_btn_Click" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="updateCage_btn" Content="Update Cage" HorizontalAlignment="Left" Margin="183,269,0,0" VerticalAlignment="Top" Width="115" Height="30" Click="updateCage_btn_Click" RenderTransformOrigin="1.261,0.684">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="-0.465"/>
-                    <TranslateTransform/>
+                    <TranslateTransform X="0.04" Y="-0.714"/>
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
         <DataGrid x:Name="gridCage" Background="Transparent" HorizontalAlignment="Center" Margin="0,342,0,10" Width="780" SelectionChanged="gridCage_SelectionChanged" />
-        <Button x:Name="LoadCages_btn" Content="Load Cages" HorizontalAlignment="Left" Margin="660,307,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="LoadCages_btn_Click"/>
+        <Button x:Name="LoadCages_btn" Content="Load Cages" HorizontalAlignment="Left" Margin="322,267,0,0" VerticalAlignment="Top" Width="115" Height="30" Click="LoadCages_btn_Click"/>
         <Button x:Name="deleteCage_btn" Content="Delete Cage" HorizontalAlignment="Left" Margin="44,270,0,0" VerticalAlignment="Top" Width="115" Height="30" Click="Delete_cage_Click" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>

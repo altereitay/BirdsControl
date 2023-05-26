@@ -53,5 +53,6 @@
 
         <DataGrid x:Name="gridBird" Background="Transparent" HorizontalAlignment="Center" Margin="0,355,0,0" Width="750" SelectionChanged="gridBird_SelectionChanged"/>
         <Label x:Name="label" Content="Search Bird" FontSize="35" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Height="64" Width="238"/>
+        <Image Source="/birds3.png" Margin="488,28,11,100"/>
     </Grid>
 </Page>

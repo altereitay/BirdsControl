@@ -343,10 +343,7 @@
                    AllowsTransparency="True"
                    HorizontalOffset="10"
                    VerticalOffset="10">
-
-
             </Popup>
-
         </Grid>
     </Grid>
 </Window>
